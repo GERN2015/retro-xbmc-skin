@@ -188,7 +188,7 @@
 						<label>20077</label>
 						<label2>$LOCALIZE[31124] &#xB7; $LOCALIZE[31986][CR]$LOCALIZE[31015]</label2>
 						<thumb>settings/skin.png</thumb>
-						<onclick>ActivateWindow(59)</onclick>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[41932]</label>

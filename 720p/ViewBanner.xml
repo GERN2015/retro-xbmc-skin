@@ -112,43 +112,45 @@
 			<include>BannersLeftMenuSlide</include>
 			<control type="fixedlist" id="54">
 				<viewtype label="535">List</viewtype>
-				<posx>191</posx>
-				<posy>15</posy>
+				<posx>201</posx>
+				<posy>76</posy>
 				<width>900</width>
-				<height>690</height>
+				<height>570</height>
 				<onleft>300</onleft>
 				<onright>76</onright>
-				<onup>566</onup>
-				<ondown>566</ondown>
+				<onup>54</onup>
+				<ondown>54</ondown>
 				<scrolltime>250</scrolltime>
-				<focusposition>2</focusposition>
+				<focusposition>3</focusposition>
 				<wraparound>true</wraparound>
 				<pagecontrol>76</pagecontrol>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
 				<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
-				<itemlayout condition="Container.Content(tvshows)" width="560" height="111">
-					<control type="image">
-						<posx>40</posx>
-						<posy>18</posy>
-						<width>575</width>
-						<height>115</height>
-						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<include>BannerUnfocusedBorder</include>
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+				<itemlayout condition="Container.Content(tvshows)" width="560" height="50">
+					<control type="label">
+						<posx>130</posx>
+						<posy>10</posy>
+						<label>$INFO[ListItem.Title]</label>
+						<include>BannerMenuUnfocused</include>
+					</control>
+					<control type="label">
+						<posx>130</posx>
+						<posy>10</posy>
+						<label>$INFO[ListItem.Label]</label>
+						<include>BannerMenuUnfocused</include>
+						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
-				<focusedlayout condition="Container.Content(tvshows)" width="560" height="233">
+				<focusedlayout condition="Container.Content(tvshows)" width="560" height="270">
 					<control type="image">
 						<posx>30</posx>
 						<posy>18</posy>
 						<width>774</width>
 						<height>156</height>
-						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
 						<include>focus_Banner</include>
@@ -219,7 +221,7 @@
 						<posy>18</posy>
 						<width>575</width>
 						<height>126</height>
-						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerUnfocusedBorder</include>
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
@@ -233,7 +235,7 @@
 						<posy>19</posy>
 						<width>790</width>
 						<height>172</height>
-						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>

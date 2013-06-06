@@ -493,7 +493,7 @@
 					<width>400</width>
 					<height>605</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 					<bordertexture border="30">frames/oldgreyrcorners.png</bordertexture>
 					<bordersize>16</bordersize>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
@@ -568,25 +568,25 @@
 			</control>
 			<!-- FUNCTIONS -->
 			<control type="group">
-				<visible>Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)|Container.Content(tvshows)</visible>
 				<control type="button" id="10">
 					<posy>570</posy>
 					<posx>507</posx>
 					<onleft>12</onleft>
 					<onright>12</onright>
-					<label>Change Poster/Thumb</label>
+					<label>Choose Art</label>
 					<font>lobsterSmall</font>
 					<textcolor>ivory2</textcolor>
 					<focusedcolor>oldBlueLight</focusedcolor>
 					<shadowcolor>ff333333</shadowcolor>
-					<width>350</width>
+					<width>250</width>
 					<height>30</height>
 					<align>left</align>
 				</control>
 				<control type="image">
 					<posy>610</posy>
 					<posx>517</posx>
-					<width>200</width>
+					<width>100</width>
 					<height>1</height>
 					<texture>frames/oldbluercorners.png</texture>
 					<aspectratio>stretch</aspectratio>

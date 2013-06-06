@@ -258,6 +258,20 @@
 			<include>transition2</include>
 		</control>
 	</include>
+	
+	<include name="FanartBackground">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>			
+			<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+		</control>
+	
+	
+	</include>
+	
 	<!-- TOP-LEVEL DRESSING -->
 	<!-- logo -->
 	<include name="RetroplexLogo">
@@ -267,6 +281,15 @@
 			<posy>18</posy>
 			<include>HomeScreenLeftMenuSlide</include>
 			<visible>[Window.IsActive(0) + !Skin.HasSetting(hidetheawesomelogo)] | [Window.IsActive(50)]</visible>
+			<visible>!Window.IsActive(4)</visible>
+			<visible>!Window.IsActive(12)</visible>
+			<visible>!Window.IsActive(13)</visible>
+			<visible>!Window.IsActive(14)</visible>
+			<visible>!Window.IsActive(15)</visible>
+			<visible>!Window.IsActive(16)</visible>
+			<visible>!Window.IsActive(17)</visible>
+			<visible>!Window.IsActive(18)</visible>
+			<visible>!Window.IsActive(19)</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -640,7 +663,7 @@
 			<width>400</width>
 			<align>right</align>
 			<height>40</height>
-			<font>qlassikSmall</font>
+			<font>qlassikMedium</font>
 			<aligny>center</aligny>
 			<textcolor>ivory3</textcolor>
 			<include>transition2</include>
@@ -653,7 +676,7 @@
 			<width>400</width>
 			<align>right</align>
 			<height>40</height>
-			<font>qlassikSmall</font>
+			<font>qlassikMedium</font>
 			<aligny>center</aligny>
 			<textcolor>ivory3</textcolor>
 			<include>transition2</include>
