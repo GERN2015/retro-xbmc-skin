@@ -17,7 +17,7 @@
 		debugging="false"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>		
-		<summary lang="en">Created by Sebastian.</summary>
+		<summary lang="en">Created by Sebastian, ported by Balinus.</summary>
 		<description lang="en">A skin that has some serious original view!</description>
 		<email>borghor at yahoo dot ca</email>
 		<disclaimer/>

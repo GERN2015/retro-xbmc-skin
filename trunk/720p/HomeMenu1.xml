@@ -140,7 +140,7 @@
 				</item>
 				<item id="12">
 					<description>Plex Online</description>
-					<label>Settings</label>
+					<label>13000</label>
 					<onclick>ActivateWindow(Settings)</onclick>
 					<visible>Skin.HasSetting(hideplexonlinemainmenu)</visible>
 				</item>
@@ -157,21 +157,22 @@
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(fancode)</visible>
 				</item>
 				<item id="13">
-					<label>Filme</label>
+					<label>20342</label>
 					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 					<visible>true</visible>
 				</item>
 				<item id="15">
-					<label>TV-Shows</label>
+					<label>20343</label>
 					<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 					<visible>true</visible>
 				</item>
-				<item id="10">
-					<description>DVD Button</description>
-					<label>DVD</label>
-					<visible>false</visible>
-					<onclick>XBMC.PlayDVD</onclick>
-				</item>
+				<item id="6">
+						<label>341</label>
+						<onclick>XBMC.PlayDVD()</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
+						<visible>System.HasMediaDVD</visible>
+					</item>
 				<item id="30">
 			        <description>Movie Sets</description>
 					<label>Film-Collections</label>

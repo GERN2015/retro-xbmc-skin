@@ -22,10 +22,10 @@
 		<!-- default fanart bg -->
 		<control type="largeimage" id="1000">
 			<include>fullScreenScale</include>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<include>fanartFadeTime</include>
 			<!--><visible>!Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)] + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2)]</visible>-->
-			<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<!-- <visible>!IsEmpty(ListItem.Art(fanart))</visible> -->
 			<include>transition2</include>
 			<animation type="OnFocus">
 				<effect type="fade" start="0" end="100" time="200" delay="300"/>
@@ -81,42 +81,42 @@
 		<!-- Settings -->
 		<control type="image">
 		<include>fullScreenStretch</include>
-		<texture background="true">backgrounds/background.jpg</texture>
+		<!-- <texture background="true">backgrounds/background.jpg</texture> -->
 		<visible>[Window.IsActive(4000) | Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)]</visible>
 		</control>		
 		<!-- Music -->
 		<control type="image">
 			<description>music bg</description>
 			<include>fullScreenScale</include>
-			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<!-- <texture background="true">backgrounds/iTunes07.jpg</texture> -->
 			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 		</control>
 		<!-- Photos -->
 		<control type="image">
 			<description>pictures bg</description>
 			<include>fullScreenScale</include>
-			<texture background="true">backgrounds/iPhoto02.jpg</texture>
+			<!-- <texture background="true">backgrounds/iPhoto02.jpg</texture> -->
 			<visible>!Skin.HasSetting(FanartGlobal) + Window.IsActive(2) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 		</control>
 		<!-- Shared Content -->
 		<control type="image">
 			<description>shared bg</description>
 			<include>fullScreenScale</include>
-			<texture background="true">backgrounds/queuebg.jpg</texture>
+			<!-- <texture background="true">backgrounds/queuebg.jpg</texture> -->
 			<visible>Window.IsActive(mysharedcontent)</visible>
 		</control>
 		<!-- Playlist now playing -->
 		<control type="image">
 			<description>playlist now bg</description>
 			<include>fullScreenScale</include>
-			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<!-- <texture background="true">backgrounds/iTunes07.jpg</texture> -->
 			<visible>Window.IsActive(musicplaylist)</visible>
 		</control>
 		<!-- Now Playing -->
 		<control type="image">
 			<description>NOW PLAYING bg</description>
 			<include>fullScreenScale</include>
-			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<!-- <texture background="true">backgrounds/iTunes07.jpg</texture> -->
 			<visible>Window.IsActive(50) + !Skin.HasSetting(retroplexmusicslideshow)</visible>
 		</control>
 	</include>
