@@ -17,7 +17,7 @@
 		<texturefocus border="20">dialogs/list-focus.png</texturefocus>		
 		<shadowcolor>ff444444</shadowcolor>
 		<height>40</height>
-		<align>left</align>
+		<align>center</align>
 		<aligny>center</aligny>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>25</textoffsetx>

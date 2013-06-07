@@ -154,7 +154,7 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
 						<include>focus_Banner</include>
-						
+						<visible>!stringcompare(ListItem.Icon,DefaultFolderBack.png)</visible>
 					</control>
 					<control type="label">
 						<posx>77</posx>
@@ -233,6 +233,7 @@
 						<include>BannerUnfocusedBorder</include>
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 						<!-- <visible>!IsEmpty(ListItem.TVShowTitle)</visible> -->
+						<visible>!stringcompare(ListItem.Icon,DefaultFolderBack.png)</visible>
 					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
@@ -246,6 +247,7 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
 						<!-- <visible>!IsEmpty(ListItem.TVShowTitle)</visible> -->
+						<visible>!stringcompare(ListItem.Icon,DefaultFolderBack.png)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -259,36 +261,36 @@
 			<visible>Control.IsVisible(566) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 			<control type="group">
 				<include>MultibannersInfosRightSlide</include>
-			<control type="label">
-				<posx>827</posx>
-				<posy>438</posy>
-				<label>$INFO[ListItem.Title]</label>
-				<include>BannerMenuFocused</include>
-				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
-			<control type="label">
-				<posx>77</posx>
-				<posy>165</posy>
-				<label>$INFO[ListItem.Label]</label>
-				<include>BannerMenuFocused</include>
-				<visible>IsEmpty(ListItem.Title)</visible>
-			</control>
-			<control type="label">
-				<posx>828</posx>
-				<posy>483</posy>
-				<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
-				<include>BannerMenuFocusedLabel2Small</include>
-				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
-				<include>BigListLeftMenuRightSlide</include>
-			</control>
-			<control type="label">
-				<posx>828</posx>
-				<posy>483</posy>
-				<label>$INFO[ListItem.Year], $INFO[ListItem.Duration] mins</label>
-				<include>BannerMenuFocusedLabel2Small</include>
-				<visible>Container.Content(Movies)</visible>
-				<include>BigListLeftMenuRightSlide</include>
-			</control>
+				<control type="label">
+					<posx>827</posx>
+					<posy>438</posy>
+					<label>$INFO[ListItem.Title]</label>
+					<include>BannerMenuFocused</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>827</posx>
+					<posy>438</posy>
+					<label>$INFO[ListItem.Label]</label>
+					<include>BannerMenuFocused</include>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>828</posx>
+					<posy>483</posy>
+					<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
+					<include>BannerMenuFocusedLabel2Small</include>
+					<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+					<include>BigListLeftMenuRightSlide</include>
+				</control>
+				<control type="label">
+					<posx>828</posx>
+					<posy>483</posy>
+					<label>$INFO[ListItem.Year], $INFO[ListItem.Duration] mins</label>
+					<include>BannerMenuFocusedLabel2Small</include>
+					<visible>Container.Content(Movies)</visible>
+					<include>BigListLeftMenuRightSlide</include>
+				</control>
 			</control>
 			<control type="image">
 				<posx>55</posx>
