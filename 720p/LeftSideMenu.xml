@@ -1148,7 +1148,7 @@
 					<description>Shutdown System</description>
 					<label>$LOCALIZE[41944]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.ShutDownSystem()</onclick>
+					<onclick>XBMC.Powerdown()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9073">
@@ -1163,7 +1163,7 @@
 					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
-					<onclick>XBMC.Shutdown()</onclick>
+					<onclick>XBMC.Quit()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 			</control>
