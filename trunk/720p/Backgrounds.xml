@@ -25,7 +25,7 @@
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<include>fanartFadeTime</include>
 			<!--><visible>!Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)] + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2)]</visible>-->
-			<!-- <visible>!IsEmpty(ListItem.Art(fanart))</visible> -->
+			<visible>!IsEmpty(ListItem.Art(fanart))</visible>
 			<include>transition2</include>
 			<animation type="OnFocus">
 				<effect type="fade" start="0" end="100" time="200" delay="300"/>

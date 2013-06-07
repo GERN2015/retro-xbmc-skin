@@ -99,11 +99,11 @@
 		
 		<!-- bg settings -->
 		<control type="group">
-			<visible>[Window.IsActive(59) | Window.IsActive(4000) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings)]</visible>
+			<visible>[Window.IsActive(59) | Window.IsActive(4000) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings)| Window.IsActive(SkinSettings)]</visible>
 			<control type="image">
 				<description>settings bg</description>
 				<include>fullScreenScale</include>
-				<texture background="true">backgrounds/background4.png</texture>
+				<texture background="true">backgrounds/ivory.png</texture>
 				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 			</control>
 		</control>
@@ -398,7 +398,7 @@
 			<include>transition2</include>
 			<include>BannersLeftMenuSlide</include>
 			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(54) + [Container.Content(tvshows)]</visible>
+			<visible>Control.IsVisible(54) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 			<control type="image">
 				<posx>52</posx>
 				<posy>93</posy>

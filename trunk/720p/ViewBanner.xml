@@ -86,7 +86,7 @@
 			<include>MultibannersLeftMenuSlide</include>
 			<texture flipx="true" border="10">dialogs/square_menu_background.png</texture>
 			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
-			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(566) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 		</control>
 		<!-- Multi Banners right bar -->
 		<control type="image">
@@ -103,10 +103,10 @@
 			<colordiffuse>theRed</colordiffuse>
 			<aspectratio align="right">stretch</aspectratio>
 			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
-			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(566) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 		</control>
 	</include>
-	<!-- BANNER VIEW (tv shows) -->
+	<!-- BANNER VIEW (tv shows and movies) -->
 	<include name="view_Banner">
 		<control type="group">
 			<include>BannersLeftMenuSlide</include>
@@ -127,8 +127,8 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
-				<itemlayout condition="Container.Content(tvshows)" width="560" height="50">
+				<visible>!Window.IsActive(progressdialog) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
+				<itemlayout condition="Container.Content(tvshows)|Container.Content(Movies)" width="560" height="50">
 					<control type="label">
 						<posx>130</posx>
 						<posy>10</posy>
@@ -144,7 +144,7 @@
 					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
-				<focusedlayout condition="Container.Content(tvshows)" width="560" height="270">
+				<focusedlayout condition="Container.Content(tvshows)|Container.Content(Movies)" width="560" height="270">
 					<control type="image">
 						<posx>30</posx>
 						<posy>18</posy>
@@ -154,7 +154,7 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
 						<include>focus_Banner</include>
-						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+						
 					</control>
 					<control type="label">
 						<posx>77</posx>
@@ -178,6 +178,13 @@
 						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 					</control>
+					<control type="label">
+						<posx>107</posx>
+						<posy>218</posy>
+						<label>$INFO[ListItem.Year], $INFO[ListItem.Duration] mins</label>
+						<include>BannerMenuFocusedLabel2Small</include>						
+						<visible>![IsEmpty(ListItem.Title)]+Container.Content(Movies)</visible>
+					</control>
 						<control type="image">
 						<posx>630</posx>
 						<posy>178</posy>
@@ -193,7 +200,7 @@
 	</include>
 	<!-- MULTI-BANNER VIEW (tv shows) -->
 	<include name="view_MultiBanner">
-		<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(566) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 		<control type="group">
 			<include>MultibannersLeftMenuSlide</include>
 			<control type="fixedlist" id="566">
@@ -214,8 +221,8 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
-				<itemlayout condition="Container.Content(tvshows)" width="560" height="112">
+				<visible>!Window.IsActive(progressdialog) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
+				<itemlayout condition="Container.Content(tvshows)|Container.Content(Movies)" width="560" height="112">
 					<control type="image">
 						<posx>40</posx>
 						<posy>18</posy>
@@ -225,11 +232,11 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerUnfocusedBorder</include>
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+						<!-- <visible>!IsEmpty(ListItem.TVShowTitle)</visible> -->
 					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
-				<focusedlayout condition="Container.Content(tvshows)" width="560" height="160">
+				<focusedlayout condition="Container.Content(tvshows)|Container.Content(Movies)" width="560" height="160">
 					<control type="image">
 						<posx>30</posx>
 						<posy>19</posy>
@@ -238,7 +245,7 @@
 						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>BannerFocusedBorder</include>
-						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+						<!-- <visible>!IsEmpty(ListItem.TVShowTitle)</visible> -->
 					</control>
 				</focusedlayout>
 			</control>
@@ -249,7 +256,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>			
-			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(566) + [Container.Content(tvshows)|Container.Content(Movies)]</visible>
 			<control type="group">
 				<include>MultibannersInfosRightSlide</include>
 			<control type="label">
@@ -272,6 +279,14 @@
 				<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 				<include>BannerMenuFocusedLabel2Small</include>
 				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+				<include>BigListLeftMenuRightSlide</include>
+			</control>
+			<control type="label">
+				<posx>828</posx>
+				<posy>483</posy>
+				<label>$INFO[ListItem.Year], $INFO[ListItem.Duration] mins</label>
+				<include>BannerMenuFocusedLabel2Small</include>
+				<visible>Container.Content(Movies)</visible>
 				<include>BigListLeftMenuRightSlide</include>
 			</control>
 			</control>
