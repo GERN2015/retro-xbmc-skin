@@ -1,26 +1,40 @@
 <includes>
 	<include name="HomeRecentlyAddedInfo">
+
 		<control type="group" id="9020">
 			<onup>300</onup>
 			<ondown>300</ondown>
                         <!-- recently video -->
 			<control type="group">
 				<posx>740</posx>
-				<posy>495</posy>
-                                <visible>Library.HasContent(Movies)</visible>
-                                <visible>Container(300).Hasfocus(13)</visible>
+				<posy>482</posy>
+				<visible>Library.HasContent(Movies)</visible>
+				<visible>Container(300).Hasfocus(13)</visible>
 				<control type="label">
 					<description>Recently Added</description>
 					<posx>150</posx>
-					<posy>-40</posy>
+					<posy>-27</posy>
 					<height>20</height>
 					<width>540</width>
-					<label>Recently Added</label>
+					<label>$LOCALIZE[31988]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-                                        <font>lobsterMediumSmall</font>
+					<font>lobsterMediumSmall</font>
 					<textcolor>oldBlue2</textcolor>
-                                        <shadowcolor>ff222222</shadowcolor>
+					<shadowcolor>ff222222</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>-335</posx>
+					<posy>-10</posy>
+					<width>400</width>
+					<height>20</height>
+					<font>lobsterSmall</font>
+					<textcolor>oldBlue2</textcolor>
+					<shadowcolor>ff222222</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(8020).ListItem.Label]</label>
+					<visible>Control.HasFocus(8020)</visible>
 				</control>
 				<control type="wraplist" id="8020">
 					<animation effect="slide" start="0,0" end="-360,0" time="300" condition="Control.HasFocus(8020)">Conditional</animation>
@@ -28,60 +42,60 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>900</width>
-					<height>220</height>
-					<onleft>SetFocus(8021,3)</onleft>
-					<onright>SetFocus(8021,3)</onright>
+					<height>300</height>
+					<onleft>8020</onleft>
+					<onright>8020</onright>
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
-					<itemlayout height="240" width="180">
-                                                <control type="image">
+					<itemlayout height="300" width="180">
+						<control type="image">
 							<posx>26</posx>
-							<posy>20</posy>
+							<posy>28</posy>
 							<width>128</width>
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<posx>90</posx>
 							<posy>0</posy>
 							<width>128</width>
 							<height>20</height>
 							<font>lobsterSmall3</font>
-                                                        <textcolor>ivory3</textcolor>
-                                                        <shadowcolor>ff222222</shadowcolor>
+							<textcolor>ivory3</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
 							<align>center</align>
-	                                      		<aligny>center</aligny>
+							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control>
+						</control> -->
 						<control type="image">
 							<posx>15</posx>
-							<posy>10</posy>
+							<posy>18</posy>
 							<width>150</width>
 							<height>190</height>
 							<texture background="true">posterFrame.png</texture>
 							<bordersize>5</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout height="240" width="180">
+					<focusedlayout height="300" width="180">
 							<control type="image">
 							<animation effect="zoom" end="120" center="26,20" time="200">Focus</animation>
 							<aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
 							<posx>26</posx>
-							<posy>20</posy>
+							<posy>28</posy>
 							<width>128</width>
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8020)</visible>
-							<onclick>XBMC.ActivateWindow(videoinfo)</onclick>
+							<!-- <visible>Control.HasFocus(8020)</visible> -->
+							<!-- <onclick>XBMC.ActivateWindow(videoinfo)</onclick> -->
 						</control>
-						<control type="image">
+					<!-- 	<control type="image">
 							<posx>26</posx>
 							<posy>20</posy>
 							<width>128</width>
@@ -91,122 +105,137 @@
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>!Control.HasFocus(8020)</visible>
-						</control>
+						</control> -->
 						<control type="image">
 							<animation effect="zoom" end="120" center="26,20" time="200">Focus</animation>
 							<posx>15</posx>
-							<posy>10</posy>
+							<posy>18</posy>
 							<width>150</width>
 							<height>190</height>
 							<texture background="true">posterFrame.png</texture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<posx>102</posx>
 							<posy>0</posy>
-							<width>145</width>
+							<width>300</width>
 							<height>20</height>
-							<font>lobsterSmall3</font>
+							<font>lobsterSmall</font>
 							<textcolor>oldBlue2</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control>
+							<visible>Control.HasFocus(8020)</visible>
+						</control> -->
 					</focusedlayout>
 					<content>
 						<item id="1">
-							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.1.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.1.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="2">
-							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.2.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.2.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="3">
-							<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.3.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.3.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="4">
-							<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.4.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.4.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="5">
-							<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.5.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.5.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="6">
-							<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.6.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.6.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="7">
-							<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.7.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.7.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.7.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="8">
-							<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.8.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.8.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.8.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="9">
-							<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.9.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.9.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.9.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.9.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 						<item id="10">
-							<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
+							<label>$INFO[Window.Property(RecentMovie.10.Title)]</label>
 							<label2></label2>
-							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.10.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
+							<onclick>$INFO[Window.Property(RecentMovie.10.Play)]</onclick>
+							<icon>$INFO[Window.Property(RecentMovie.10.Art(poster))]</icon>
 							<thumb>-</thumb>
 						</item>
 					</content>
 				</control>
 			</control>
 
-                        <!-- recently tv-shows -->
+			<!-- recently tv-shows -->
 			<control type="group">
 				<posx>810</posx>
 				<posy>510</posy>
-                                <visible>Library.HasContent(TVShows)</visible>
-                                <visible>Container(300).Hasfocus(15)</visible>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>Container(300).Hasfocus(15)</visible>
 				<control type="label">
 					<description>Recently Added</description>
 					<posx>80</posx>
 					<posy>-55</posy>
 					<height>20</height>
 					<width>540</width>
-					<label>Recently Added</label>
+					<label>$LOCALIZE[31988]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-                                        <font>lobsterMediumSmall</font>
+					<font>lobsterMediumSmall</font>
 					<textcolor>oldBlue2</textcolor>
-                                        <shadowcolor>ff222222</shadowcolor>
+					<shadowcolor>ff222222</shadowcolor>
+				</control>
+				<control type="label">
+					<animation effect="zoom" end="125" center="auto" time="200">Focus</animation>
+					<posx>-460</posx>
+					<posy>-28</posy>
+					<width>600</width>
+					<height>20</height>
+					<font>lobsterSmall</font>
+					<textcolor>oldBlue2</textcolor>
+					<shadowcolor>ff222222</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(8021).ListItem.Label]</label>
+					<visible>Control.HasFocus(8021)</visible>
 				</control>
 				<control type="wraplist" id="8021">
 					<animation effect="slide" start="0,0" end="-450,0" time="300" condition="Control.HasFocus(8021)">Conditional</animation>
@@ -224,7 +253,7 @@
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
 					<itemlayout height="220" width="220">
-                                                <control type="image">
+						<control type="image">
 							<posx>10</posx>
 							<posy>-20</posy>
 							<width>200</width>
@@ -232,18 +261,18 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<posx>110</posx>
 							<posy>155</posy>
 							<width>200</width>
 							<height>20</height>
 							<font>lobsterSmall3</font>
-                                                        <textcolor>ivory3</textcolor>
-                                                        <shadowcolor>ff222222</shadowcolor>
+							<textcolor>ivory3</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control>
+						</control> -->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -254,16 +283,7 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="220" width="240">
-							<control type="image">
-							<posx>10</posx>
-							<posy>-20</posy>
-							<width>200</width>
-							<height>170</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<visible>Control.HasFocus(8020)</visible>
-						</control>
+					
 						<control type="image">
 						<animation effect="zoom" end="125" center="90,16" time="200">Focus</animation>
 							<posx>10</posx>
@@ -273,7 +293,7 @@
 							<texture>$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
-							<visible>!Control.HasFocus(8020)</visible>
+							<!-- <visible>!Control.HasFocus(8020)</visible> -->
 						</control>
 						<control type="image">
 						<animation effect="zoom" end="125" center="100,14" time="200">Focus</animation>
@@ -284,7 +304,7 @@
 							<texture background="true">posterFrame2.png</texture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 						<animation effect="zoom" end="125" center="auto" time="200">Focus</animation>
 							<posx>10</posx>
 							<posy>155</posy>
@@ -296,48 +316,48 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control>
+						</control> -->
 					</focusedlayout>
 					<content>
 						<item id="1">
-							<label>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.1.EpisodeNumber)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.1.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(LatestEpisode.1.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestEpisode.1.Thumb)]</icon>
+							<label>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.1.Title)]</label>
+							<label2>$INFO[Window.Property(RecentEpisode.1.Episode)]</label2>
+							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.1.EpisodeSeason)]</property>
+							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.1.Rating)]</property>
+							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.1.Path)])</onclick>
+							<icon>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</icon>
 						</item>
 						<item id="2">
-							<label>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.2.EpisodeNumber)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.2.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(LatestEpisode.2.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestEpisode.2.Thumb)]</icon>
+							<label>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.2.Title)]</label>
+							<label2>$INFO[Window.Property(RecentEpisode.2.Episode)]</label2>
+							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.2.EpisodeSeason)]</property>
+							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.2.Rating)]</property>
+							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.2.Path)])</onclick>
+							<icon>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</icon>
 						</item>
 						<item id="3">
-							<label>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.3.EpisodeNumber)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.3.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(LatestEpisode.3.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestEpisode.3.Thumb)]</icon>
+							<label>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.3.Title)]</label>
+							<label2>$INFO[Window.Property(RecentEpisode.3.Episode)]</label2>
+							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.3.EpisodeSeason)]</property>
+							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.3.Rating)]</property>
+							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.3.Path)])</onclick>
+							<icon>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</icon>
 						</item>
 						<item id="4">
-							<label>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.4.EpisodeNumber)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.4.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(LatestEpisode.4.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestEpisode.4.Thumb)]</icon>
+							<label>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.4.Title)]</label>
+							<label2>$INFO[Window.Property(RecentEpisode.4.Episode)]</label2>
+							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.4.EpisodeSeason)]</property>
+							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.4.Rating)]</property>
+							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.4.Path)])</onclick>
+							<icon>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</icon>
 						</item>
 						<item id="5">
-							<label>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
-							<label2>$INFO[Window.Property(LatestEpisode.5.EpisodeNumber)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.5.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(LatestEpisode.5.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.5.Path)])</onclick>
-							<icon>$INFO[Window.Property(LatestEpisode.5.Thumb)]</icon>
+							<label>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.5.Title)]</label>
+							<label2>$INFO[Window.Property(RecentEpisode.5.Episode)]</label2>
+							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.5.EpisodeSeason)]</property>
+							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.5.Rating)]</property>
+							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.5.Path)])</onclick>
+							<icon>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</icon>
 						</item>
 					</content>
 				</control>

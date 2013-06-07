@@ -6,6 +6,8 @@
 			<include>transition2</include>
 			<!-- Background -->
 			<control type="group">
+			<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 				<control type="image">
 					<posx>-383</posx>
 					<posy>-50</posy>
@@ -20,6 +22,8 @@
 				</control>
 			</control>
 			<control type="image">
+			<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 				<posx>-313</posx>
 				<posy>9</posy>
 				<height>702</height>
@@ -36,6 +40,8 @@
 			<include>leftMenuSlide</include>
 			<include>transition2</include>
 			<control type="group">
+			<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 				<control type="image">
 					<posx>-301</posx>
 					<posy>0</posy>
@@ -91,6 +97,8 @@
 		</control>
 	</include>
 	<include name="leftMenuTitle">
+	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<textoffsety>5</textoffsety>
 		<textoffsetx>20</textoffsetx>
 		<font>lobsterSmall</font>
@@ -105,9 +113,13 @@
 		<width>278</width>
 	</include>
 	<include name="leftMenuSpacing">
+	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<height>5</height>
 	</include>
 	<include name="leftMenuFormat">
+	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="80"/>
 		</animation>
@@ -122,6 +134,8 @@
 		<width>325</width>
 	</include>
 	<include name="leftMenuViewOptions">
+	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="100"/>
 		</animation>
@@ -137,6 +151,8 @@
 		<width>278</width>
 	</include>
 	<include name="leftMenuRadioButton">
+	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+	<visible>!Control.HasFocus(300)</visible>
 		<description>default radio button</description>
 		<textureradiofocus>settings/radioOn.png</textureradiofocus>
 		<textureradionofocus>settings/radioOff.png</textureradionofocus>
@@ -148,6 +164,8 @@
 	</include>
 	<include name="cutie">
 		<control type="group">
+		<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 			<include>cutieLeftMenuSlide</include>
 			<include>transition2</include>
 			<!-- home -->
@@ -254,7 +272,9 @@
 			<onleft>-</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
+			<visible>![Container(8021).HasFocus(1)]</visible>
 			<visible allowhiddenfocus="true">![ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(5000).HasFocus()]</visible>
+			<!-- <visible allowhiddenfocus="true">!Control.HasFocus(8021)</visible> -->
 			<animation effect="slide" start="202" end="40" time="500" condition="!ControlGroup(9000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="40" end="202" time="500" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 			<!--<include>homeMenuToggle</include>-->
@@ -298,7 +318,7 @@
 				</control>
 				<control type="button" id="9096">
 					<!-- label to do -->
-					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>$LOCALIZE[41980]</label>
 					<label>Now Playing Visualizer</label>
 					<onclick>ActivateWindow(nowplaying)</onclick>
 					<visible>Player.HasAudio</visible>
@@ -385,7 +405,7 @@
 					<description>Shutdown System</description>
 					<label>$LOCALIZE[41944]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.ShutDownSystem()</onclick>
+					<onclick>XBMC.Powerdown()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9014">
@@ -397,10 +417,10 @@
 				</control>
 				<control type="button" id="9013">
 					<description>Quit XBMC</description>
-					<label>XBMC verlassen</label>
+					<label>$LOCALIZE[31989]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
-					<onclick>XBMC.Shutdown()</onclick>
+					<onclick>XBMC.Quit()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 			</control>
