@@ -26,26 +26,14 @@
 				</animation>
 			</control>
 			<!-- "new list" focused item fanart while using inside the list -->
-			<!-- on deck -->
-			<control type="multiimage">
-				<visible>ControlGroup(7001).HasFocus + !Container(11000).ListItem(0).Type(Photo)</visible>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
-				<aspectratio>scale</aspectratio>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<fadetime>400</fadetime>
-				<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
-			</control>
+
+			
 			<!-- recently added -->
 			<control type="multiimage">
-				<visible>ControlGroup(7002).HasFocus</visible>
+				<visible>Control.HasFocus(8020)</visible>
 				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
+				<texture background="true">$INFO[Container(8020).ListItem.Art(fanart)]</texture>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -56,16 +44,17 @@
 			</control>
 			<!-- recently used -->
 			<control type="multiimage">
-				<visible>ControlGroup(7004).HasFocus</visible>
+				<visible>Control.HasFocus(8021)</visible>
 				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
+				<texture background="true">$INFO[Container(8021).ListItem.Art(fanart)]</texture>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
 				<fadetime>400</fadetime>
+				<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
 			</control>
 			<!-- SILLY HACKS -->
 			<!-- photos hack -->
@@ -97,6 +86,7 @@
 				<animation effect="fade" start="70" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
 			</control>
 		</control>
+		
 		<include>slideshows</include>
 		<!-- test image -->
 		<!--><control type="image" id="21">
@@ -129,6 +119,6 @@
 		<include>nowPlayingBottomWide</include>
 		<!-- HELP -->
 		<include>RetroplexHelp</include>
-                <include>HomeRecentlyAddedInfo</include>
+		<include>HomeRecentlyAddedInfo</include>
 	</controls>
 </window>
