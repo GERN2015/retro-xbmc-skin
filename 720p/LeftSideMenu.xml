@@ -833,7 +833,7 @@
 					<description>Search</description>
 					<label>$LOCALIZE[41947]</label>
 					<onclick>SetFocus(555)</onclick>
-					<onclick>Plex.ActivateWindow(10051)</onclick>
+					<onclick>XBMC.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9006">
@@ -877,14 +877,14 @@
 					<label>$LOCALIZE[537]</label>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>[Container.Content(episodes)] + !Window.IsActive(2)</visible>
+					<visible>[Container.Content(Episodes)] + !Window.IsActive(2)</visible>
 				</control>
 				<!-- slide (movies, tv shows & seasons) -->
 				<control type="button" id="9005">
 					<label>$LOCALIZE[31003]</label>
 					<onclick>Container.SetViewMode(52)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 				</control>
 				<!-- slide (episodes) -->
 				<!--<control type="button" id="9006">
@@ -905,14 +905,14 @@
 					<label>$LOCALIZE[41949]</label>
 					<onclick>Container.SetViewMode(57)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 				</control>
 				<!-- thumbnails small -->
 				<control type="button" id="9008">
 					<label>$LOCALIZE[41950]</label>
 					<onclick>Container.SetViewMode(571)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
+					<visible>[Container.Content(Movies) | Container.Content(TVShows)]</visible>
 				</control>
 				<!-- thumbnails photos -->
 				<control type="button" id="9091">
@@ -926,14 +926,14 @@
 					<label>$LOCALIZE[31093]</label>
 					<onclick>Container.SetViewMode(54)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>Container.Content(tvshows)</visible>
+					<visible>Container.Content(TVShows)|Container.Content(Movies)</visible>
 				</control>
 				<!-- multi-banners (tv shows) -->
 				<control type="button" id="9022">
 					<label>$LOCALIZE[41951]</label>
 					<onclick>Container.SetViewMode(566)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>[Container.Content(tvshows)]</visible>
+					<visible>[Container.Content(TVShows)|Container.Content(Movies)]</visible>
 				</control>
 				<!-- gallery (movies & tv shows) -->
 				<!--<control type="button" id="9012">

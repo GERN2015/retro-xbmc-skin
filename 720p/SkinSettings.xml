@@ -576,6 +576,6 @@
 				</control>
 			</control>
 		</control>
-		<include>RetroplexLogo</include>
+		<!-- <include>RetroplexLogo</include> -->
 	</controls>
 </window>
