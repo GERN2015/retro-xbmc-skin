@@ -263,6 +263,13 @@
 					<selected>Skin.HasSetting(hidetheawesomelogo)</selected>
 					<include>MenuSubSettingsButton</include>
 				</control>	
+				<control type="radiobutton" id="205">
+					<description>hide Retroplex logo</description>
+					<label>Hide pin-ups</label>
+					<onclick>Skin.ToggleSetting(hidecutie)</onclick>
+					<selected>Skin.HasSetting(hidecutie)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>	
 			</control>
 			<!-- fanart -->
 			<control type="grouplist" id="200">
