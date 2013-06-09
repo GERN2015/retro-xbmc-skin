@@ -252,7 +252,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
-					<itemlayout height="220" width="220">
+					<itemlayout height="220" width="240">
 						<control type="image">
 							<posx>10</posx>
 							<posy>-20</posy>
