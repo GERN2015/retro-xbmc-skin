@@ -83,7 +83,7 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="300" width="180">
-							<control type="image">
+						<control type="image">
 							<animation effect="zoom" end="120" center="26,20" time="200">Focus</animation>
 							<aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
 							<posx>26</posx>
@@ -244,8 +244,8 @@
 					<posy>0</posy>
 					<width>900</width>
 					<height>220</height>
-					<onleft>SetFocus(8021,3)</onleft>
-					<onright>SetFocus(8021,3)</onright>
+					<onleft>8021</onleft>
+					<onright>8021</onright>
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<viewtype label="535">list</viewtype>
@@ -283,26 +283,28 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="220" width="240">
-					
-						<control type="image">
-						<animation effect="zoom" end="125" center="90,16" time="200">Focus</animation>
-							<posx>10</posx>
-							<posy>-20</posy>
-							<width>200</width>
-							<height>170</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<!-- <visible>!Control.HasFocus(8020)</visible> -->
-						</control>
-						<control type="image">
-						<animation effect="zoom" end="125" center="100,14" time="200">Focus</animation>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>225</width>
-							<height>130</height>
-							<texture background="true">posterFrame2.png</texture>
-							<bordersize>5</bordersize>
+						<control type="group">
+							<animation effect="zoom" end="125" center="90,16" time="200" condition="Control.HasFocus(8021)">Focus</animation>
+							<control type="image">
+								<!-- <animation effect="zoom" end="125" center="90,16" time="200">Focus</animation> -->
+								<posx>10</posx>
+								<posy>-20</posy>
+								<width>200</width>
+								<height>170</height>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5">button-nofocus.png</bordertexture>
+								<bordersize>5</bordersize>
+								<visible>!Control.HasFocus(8020)</visible>
+							</control>
+							<control type="image">
+							<!-- <animation effect="zoom" end="125" center="100,14" time="200">Focus</animation> -->
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>225</width>
+								<height>130</height>
+								<texture background="true">posterFrame2.png</texture>
+								<bordersize>5</bordersize>
+							</control>
 						</control>
 						<!-- <control type="label">
 						<animation effect="zoom" end="125" center="auto" time="200">Focus</animation>
@@ -364,7 +366,7 @@
 			</control>
 			
 		    <!-- recently music -->
-			<control type="group">
+			<!-- <control type="group">
 				<posx>740</posx>
 				<posy>30</posy>
 				<visible>Library.HasContent(Music)</visible>
@@ -389,8 +391,8 @@
 					<posy>0</posy>
 					<width>900</width>
 					<height>220</height>
-					<onleft>SetFocus(8021,3)</onleft>
-					<onright>SetFocus(8021,3)</onright>
+					<onleft>SetFocus(8020,3)</onleft>
+					<onright>SetFocus(8020,3)</onright>
 					<onup>20</onup>
 					<ondown>600</ondown>
 					<viewtype label="535">list</viewtype>
@@ -497,10 +499,10 @@
 					</content>
 				</control>
 			</control>
-
+ -->
 <!-- Doku Anfang-->	
 			
-			<control type="group">
+		<!-- 	<control type="group">
 				<posx>740</posx>
 				<posy>30</posy>
 				<visible>Library.HasContent(Movies)</visible>
@@ -525,8 +527,8 @@
 					<posy>0</posy>
 					<width>900</width>
 					<height>220</height>
-					<onleft>SetFocus(8021,3)</onleft>
-					<onright>SetFocus(8021,3)</onright>
+					<onleft>SetFocus(8020,3)</onleft>
+					<onright>SetFocus(8020,3)</onright>
 					<onup>20</onup>
 					<ondown>600</ondown>
 					<viewtype label="535">list</viewtype>
@@ -632,11 +634,11 @@
 						</item>
 					</content>
 				</control>
-			</control>
+			</control> -->
 
 <!-- Doku Ende-->	
 <!-- Custom1 Anfang -->
-	<control type="group">
+<!-- 	<control type="group">
 		<posx>740</posx>
 		<posy>30</posy>
 		<visible>Library.HasContent(Movies)</visible>
@@ -661,8 +663,8 @@
 		<posy>0</posy>
 		<width>900</width>
 		<height>220</height>
-		<onleft>SetFocus(8021,3)</onleft>
-		<onright>SetFocus(8021,3)</onright>
+		<onleft>SetFocus(8020,3)</onleft>
+		<onright>SetFocus(8020,3)</onright>
 		<onup>20</onup>
 		<ondown>600</ondown>
 		<viewtype label="535">list</viewtype>
@@ -768,11 +770,11 @@
 			</item>
 		</content>
 	</control>
-</control>
+</control> -->
 
 <!-- Custom1 Ende -->		
 			
-			<control type="group">
+			<!-- <control type="group">
 				<posx>0</posx>
 				<posy>30</posy>
 				<visible>Library.HasContent(TVShows)</visible>
@@ -800,8 +802,8 @@
 					<posy>0</posy>
 					<width>960</width>
 					<height>240</height>
-					<onleft>SetFocus(8020,0)</onleft>
-					<onright>SetFocus(8020,0)</onright>
+					<onleft>SetFocus(8021,0)</onleft>
+					<onright>SetFocus(8021,0)</onright>
 					<onup>20</onup>
 					<ondown>600</ondown>
 					<viewtype label="535">list</viewtype>
@@ -943,8 +945,8 @@
 						</item>
 					</content>
 				</control>
-			</control>
-			<control type="group">
+			</control> -->
+			<!-- <control type="group">
 				<posx>200</posx>
 				<posy>0</posy>
 				<visible>Library.HasContent(Movies)</visible>
@@ -1058,7 +1060,7 @@
 							<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
 							<thumb>-</thumb>
-							<!-- $INFO[Window.Property(LatestMovie.1.Property(fanart_image))] -->
+						
 						</item>
 						<item id="2">
 							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
@@ -1076,8 +1078,8 @@
 						</item>
 					</content>
 				</control>
-			</control>
-			<control type="group">
+			</control> -->
+			<!-- <control type="group">
 				<posx>200</posx>
 				<posy>0</posy>
 				<visible>Library.HasContent(TVShows)</visible>
@@ -1386,8 +1388,8 @@
 						</item>
 					</content>
 				</control>
-			</control>
-			<control type="group">
+			</control> -->
+			<!-- <control type="group">
 				<posx>200</posx>
 				<posy>0</posy>
 				<visible>Library.HasContent(Music)</visible>
@@ -1542,7 +1544,7 @@
 						</item>
 					</content>
 				</control>
-			</control>
+			</control> -->
 		</control>
 	</include>
 </includes>
