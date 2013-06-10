@@ -125,6 +125,17 @@
 				<onleft>-</onleft>
 				<onright>200</onright>
 				<itemgap>0</itemgap>
+				<!-- General -->
+				<control type="button" id="8999">
+					<label>$LOCALIZE[31991]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(201) | Control.HasFocus(202) | Control.HasFocus(203) | Control.HasFocus(204) | Control.HasFocus(205) | Control.HasFocus(206) | Control.HasFocus(207) | Control.HasFocus(208) | Control.HasFocus(209) | Control.HasFocus(210)]</visible>
+				</control>
+			<!-- 	<control type="button" id="8998">
+					<label>$LOCALIZE[31991]</label>
+					<include>settingsLeftMenuFormat2</include>
+					<visible>!Control.IsVisible(9001)</visible>
+				</control> -->
 				<!-- home screen -->
 				<control type="button" id="9001">
 					<label>$LOCALIZE[31124]</label>
@@ -222,6 +233,57 @@
 			<width>895</width>
 			<height>595</height>
 			<include>transition2</include>
+			
+			<!-- GENERAL -->
+			<control type="grouplist" id="200">
+				<onleft>8999</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<include>transition2</include>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(8999)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
+				<control type="radiobutton" id="201">
+					<description>Turn Retroplex slideshow ON</description>
+					<label>$LOCALIZE[41941]</label>
+					<onclick>Skin.ToggleSetting(RetroplexSlideShow)</onclick>
+					<selected>!Skin.HasSetting(RetroplexSlideShow)</selected>
+					<enable>![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)]</enable>
+					<include>MenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="202">
+					<description>Set your own slideshow</description>
+					<label>$LOCALIZE[41942]</label>
+					<onclick>Skin.SetPath(SlideShow)</onclick>
+					<onclick>Skin.ToggleSetting(personalSlideShow)</onclick>
+					<selected>Skin.HasSetting(personalSlideShow)</selected>
+					<enable>[!Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)]</enable>
+					<include>MenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="203">
+					<description>turn off slideshows</description>
+					<label>$LOCALIZE[41003]</label>
+					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
+					<selected>Skin.HasSetting(FanartSlideShow)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="204">
+					<description>hide Retroplex logo</description>
+					<label>$LOCALIZE[41004]</label>
+					<onclick>Skin.ToggleSetting(hidetheawesomelogo)</onclick>
+					<selected>Skin.HasSetting(hidetheawesomelogo)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>	
+				<control type="radiobutton" id="205">
+					<description>hide Retroplex logo</description>
+					<label>Hide pin-ups</label>
+					<onclick>Skin.ToggleSetting(hidecutie)</onclick>
+					<selected>Skin.HasSetting(hidecutie)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>	
+			</control>
+			
 			<!-- home screen -->
 			<control type="grouplist" id="200">
 				<onleft>9001</onleft>
@@ -231,7 +293,7 @@
 				<itemgap>0</itemgap>
 				<include>transition2</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)</visible>
-				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(8999)">Conditional</animation>
 				<control type="radiobutton" id="201">
 					<description>Turn Retroplex slideshow ON</description>
 					<label>$LOCALIZE[41941]</label>

@@ -52,7 +52,7 @@
 	<include name="view_BigList">
 		<!-- list -->
 		<control type="fixedlist" id="51">
-			<viewtype label="537">biglist</viewtype>
+			<viewtype label="Big List">List</viewtype>
 			<posy>75</posy>
 			<width>1400</width>
 			<height>610</height>

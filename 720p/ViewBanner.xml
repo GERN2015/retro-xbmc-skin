@@ -111,7 +111,7 @@
 		<control type="group">
 			<include>BannersLeftMenuSlide</include>
 			<control type="fixedlist" id="54">
-				<viewtype label="535">List</viewtype>
+				<viewtype label="Banner">List</viewtype>
 				<posx>201</posx>
 				<posy>76</posy>
 				<width>900</width>
@@ -204,7 +204,7 @@
 		<control type="group">
 			<include>MultibannersLeftMenuSlide</include>
 			<control type="fixedlist" id="566">
-				<viewtype label="535">List</viewtype>
+				<viewtype label="Multi Banner">List</viewtype>
 				<posx>191</posx>
 				<posy>38</posy>
 				<width>900</width>

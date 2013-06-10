@@ -226,7 +226,7 @@
 				</control>
 				<control type="label">
 					<!-- <animation effect="zoom" end="125" center="auto" time="200">Focus</animation> -->
-					<posx>-460</posx>
+					<posx>-478</posx>
 					<posy>-28</posy>
 					<width>600</width>
 					<height>20</height>
@@ -241,9 +241,9 @@
 				<control type="wraplist" id="8021">
 					<animation effect="slide" start="0,0" end="-450,0" time="300" condition="Control.HasFocus(8021)">Conditional</animation>
 					<!-- <animation effect="slide" start="0,0" end="450,0"  time="300" condition="Control.HasFocus(8022)">Conditional</animation> -->
-					<posx>0</posx>
+					<posx>-18</posx>
 					<posy>0</posy>
-					<width>900</width>
+					<width>950</width>
 					<height>220</height>
 					<onleft>8021</onleft>
 					<onright>8021</onright>
