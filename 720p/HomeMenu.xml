@@ -18,7 +18,7 @@
 	</include>
 	<include name="homeMenuUnfocused">
 		<!-- opacity -->
-		<animation effect="fade" start="100" end="100" time="350" condition="true">Conditional</animation>
+		<!-- <animation effect="fade" start="100" end="100" time="350" condition="true">Conditional</animation> -->
 		<posx>85</posx>
 		<posy>230</posy>
 		<!--<font>geoSmall2</font>-->
@@ -37,10 +37,10 @@
 		<shadowcolor>ff333333</shadowcolor>
 		<align>left</align>
 		<width>1100</width>
-		<!--><animation type="Focus" reversible="false">
+		<animation type="Focus" reversible="false">
 			<effect type="zoom" center="85,250" start="60" end="100" time="450" tween="Cubic" easing="out"/>
 			<effect type="fade" start="0" end="100" time="550"/>
-		</animation>-->
+		</animation>
 	</include>
 	<include name="HomeMenu">
 		<!-- HOME MENU -->
@@ -110,7 +110,7 @@
 					<visible>Skin.HasSetting(showprogramsmainmenu)</visible>
 				</item>
 				<item id="22">
-					<description>Playlist</description>
+					<description>Weather</description>
 					<!--onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick-->
 					<label>8</label>
 					<onclick>ActivateWindow(weather)</onclick>
@@ -148,7 +148,7 @@
 				</item>
 				<item id="9">
 					<description>Retroplex Help</description>
-					<label>$LOCALIZE[41938]</label>
+					<label>$LOCALIZE[41938]</label>					
 					<!--><onclick>ActivateWindow(4999)</onclick>-->
 					<onclick>Skin.ToggleSetting(showmainhelp)</onclick>
 					<visible>!Skin.HasSetting(hidehelpmainmenu)</visible>
