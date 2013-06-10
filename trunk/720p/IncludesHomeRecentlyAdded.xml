@@ -115,6 +115,7 @@
 							<texture background="true">posterFrame.png</texture>
 							<bordersize>5</bordersize>
 						</control>
+						
 						<!-- <control type="label">
 							<posx>102</posx>
 							<posy>0</posy>
@@ -283,8 +284,8 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="220" width="240">
-						<control type="group">
-							<animation effect="zoom" end="125" center="90,16" time="200" condition="Control.HasFocus(8021)">Focus</animation>
+						<control type="group">						
+							<!-- <animation effect="zoom" end="125" center="90,16" time="200" condition="Control.HasFocus(8021)">Focus</animation> -->
 							<control type="image">
 								<!-- <animation effect="zoom" end="125" center="90,16" time="200">Focus</animation> -->
 								<posx>10</posx>
@@ -304,6 +305,16 @@
 								<height>130</height>
 								<texture background="true">posterFrame2.png</texture>
 								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+							<!-- <animation effect="zoom" end="125" center="100,14" time="200">Focus</animation> -->
+								<posx>80</posx>
+								<posy>30</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture background="true">play.png</texture>
+								<bordersize>5</bordersize>
+								<visible>Control.HasFocus(8021)</visible>
 							</control>
 						</control>
 						<!-- <control type="label">
