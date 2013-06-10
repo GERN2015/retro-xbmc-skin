@@ -164,7 +164,7 @@
 	</include>
 	<include name="cutie">
 		<control type="group">
-		<visible>|Skin.HasSetting(hidecutie)</visible>
+		<visible>!Skin.HasSetting(hidecutie)</visible>
 		<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
 		<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 			<include>cutieLeftMenuSlide</include>
