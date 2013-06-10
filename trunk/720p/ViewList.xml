@@ -306,7 +306,7 @@
 			</control>
 			<!-- menu -->
 			<control type="fixedlist" id="555">
-				<viewtype label="555">list</viewtype>
+				<viewtype label="List">list</viewtype>
 				<posx>0</posx>
 				<posy>120</posy>
 				<height>520</height>

@@ -80,30 +80,49 @@
 				</control>
 				<control type="button" id="704">
 					<posx>165</posx>
+					<posy>0</posy>
 					<width>48</width>
 					<height>48</height>
-					<texturefocus>osd/osd-button-prev-focus.png</texturefocus>
-					<texturenofocus>osd/osd-button-prev.png</texturenofocus>
+					<label>subtitles</label>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<texturefocus>osd/osd-button-subs-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-subs.png</texturenofocus>
 					<onleft>703</onleft>
 					<onright>705</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
-					<onclick>PlayerControl(Previous)</onclick>
+					<onclick>Close</onclick>
+					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
+					<enable>Skin.HasSetting(SubtitleDownload_Enable) + !IsEmpty(Skin.String(SubtitleScript_Path))</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="![Skin.HasSetting(SubtitleDownload_Enable) + !IsEmpty(Skin.String(SubtitleScript_Path))]">Conditional</animation>
 				</control>
 				<control type="button" id="705">
 					<posx>220</posx>
 					<width>48</width>
 					<height>48</height>
-					<texturefocus>osd/osd-button-rwd-focus.png</texturefocus>
-					<texturenofocus>osd/osd-button-rwd.png</texturenofocus>
+					<texturefocus>osd/osd-button-prev-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-prev.png</texturenofocus>
 					<onleft>704</onleft>
 					<onright>706</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="706">
+					<posx>275</posx>
+					<width>48</width>
+					<height>48</height>
+					<texturefocus>osd/osd-button-rwd-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-rwd.png</texturenofocus>
+					<onleft>705</onleft>
+					<onright>707</onright>
+					<onup>702</onup>
+					<ondown>709</ondown>
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
-				<control type="togglebutton" id="706">
-					<posx>275</posx>
+				<control type="togglebutton" id="707">
+					<posx>330</posx>
 					<width>48</width>
 					<height>48</height>
 					<texturefocus>osd/osd-button-pause-focus.png</texturefocus>
@@ -111,25 +130,11 @@
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<alttexturefocus>osd/osd-button-play-focus.png</alttexturefocus>
 					<alttexturenofocus>osd/osd-button-play.png</alttexturenofocus>
-					<onleft>705</onleft>
-					<onright>707</onright>
-					<onup>702</onup>
-					<ondown>709</ondown>
-					<onclick>PlayerControl(Play)</onclick>
-				</control>
-				<control type="button" id="707">
-					<posx>330</posx>
-					<posy>0</posy>
-					<width>48</width>
-					<height>48</height>
-					<font>-</font>
-					<texturefocus>osd/osd-button-fwd-focus.png</texturefocus>
-					<texturenofocus>osd/osd-button-fwd.png</texturenofocus>
 					<onleft>706</onleft>
 					<onright>708</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
-					<onclick>PlayerControl(Forward)</onclick>
+					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button" id="708">
 					<posx>385</posx>
@@ -137,13 +142,13 @@
 					<width>48</width>
 					<height>48</height>
 					<font>-</font>
-					<texturefocus>osd/osd-button-next-focus.png</texturefocus>
-					<texturenofocus>osd/osd-button-next.png</texturenofocus>
+					<texturefocus>osd/osd-button-fwd-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-fwd.png</texturenofocus>
 					<onleft>707</onleft>
 					<onright>709</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
-					<onclick>PlayerControl(Next)</onclick>
+					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button" id="709">
 					<posx>440</posx>
@@ -151,23 +156,37 @@
 					<width>48</width>
 					<height>48</height>
 					<font>-</font>
+					<texturefocus>osd/osd-button-next-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-next.png</texturenofocus>
+					<onleft>708</onleft>
+					<onright>710</onright>
+					<onup>702</onup>
+					<ondown>709</ondown>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="button" id="710">
+					<posx>495</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<font>-</font>
 					<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
 					<texturenofocus>osd/osd-button-stop.png</texturenofocus>
-					<onleft>708</onleft>
+					<onleft>709</onleft>
 					<onright>711</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button" id="711">
-					<posx>495</posx>
+					<posx>550</posx>
 					<posy>0</posy>
 					<width>48</width>
 					<height>48</height>
 					<font>-</font>
 					<texturefocus>osd/osd-button-dvd-focus.png</texturefocus>
 					<texturenofocus>osd/osd-button-dvd.png</texturenofocus>
-					<onleft>709</onleft>
+					<onleft>710</onleft>
 					<onright>702</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
