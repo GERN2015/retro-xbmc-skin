@@ -1,5 +1,5 @@
 <window>
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">8999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Backgrounds</include>
@@ -129,7 +129,7 @@
 				<control type="button" id="8999">
 					<label>$LOCALIZE[31991]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(101) | Control.HasFocus(202) | Control.HasFocus(203) | Control.HasFocus(204) | Control.HasFocus(205) | Control.HasFocus(206) | Control.HasFocus(207) | Control.HasFocus(208) | Control.HasFocus(209) | Control.HasFocus(210)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(101) | Control.HasFocus(102)]</visible>
 				</control>
 				<control type="button" id="8998">
 					<label>$LOCALIZE[31991]</label>
@@ -244,12 +244,22 @@
 				<include>transition2</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(8999)</visible>
 				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(8999)">Conditional</animation>
+				
 				<control type="radiobutton" id="101">
-					<description>Turn Retroplex slideshow ON</description>
-					<label>$LOCALIZE[41941]</label>
-					<onclick>Skin.ToggleSetting(RetroplexSlideShow)</onclick>
-					<selected>!Skin.HasSetting(RetroplexSlideShow)</selected>
-					<enable>![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)]</enable>
+					<description>Enable Subtitles</description>
+					<label>$LOCALIZE[31993]</label>
+					<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>					
+					<onclick>Skin.ToggleSetting(SubtitleDownload_Enable)</onclick>
+					<selected>Skin.HasSetting(SubtitleDownload_Enable)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>
+				<control type="button" id="102">
+					<width>785</width>
+					<height>40</height>
+					<label>- $LOCALIZE[31994]</label>
+					<label2>[COLOR=white]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
+					<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+					<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
 					<include>MenuSubSettingsButton</include>
 				</control>
 				
@@ -610,7 +620,7 @@
 				</control>
 				<control type="radiobutton" id="220">
 					<description>hide Help menu entry</description>
-					<label>$LOCALIZE[41015]</label>
+					<label>$LOCALIZE[41031]</label>
 					<onclick>Skin.ToggleSetting(hidehelpmainmenu)</onclick>
 					<selected>Skin.HasSetting(hidehelpmainmenu)</selected>
 					<include>MenuSubSettingsButton</include>
