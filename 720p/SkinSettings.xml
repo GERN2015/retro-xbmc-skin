@@ -21,8 +21,8 @@
 			<height>450</height>
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)]">Conditional</animation>
+			<visible>ControlGroup(9100).HasFocus(8999) | ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus(8999) | ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)]">Conditional</animation>
 		</control>
 		<control type="image">
 			<posy>160</posy>
@@ -87,7 +87,7 @@
 			<aligny>center</aligny>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9013) | ControlGroup(9100).HasFocus(9019)</visible>
+			<visible>ControlGroup(9100).HasFocus(8999) | ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9013) | ControlGroup(9100).HasFocus(9019)</visible>
 		</control>
 		<!--><control type="label">
 			<posx>355</posx>
@@ -254,7 +254,7 @@
 					<include>MenuSubSettingsButton</include>
 				</control>
 				<control type="button" id="102">
-					<width>785</width>
+					<width>783</width>
 					<height>40</height>
 					<label>- $LOCALIZE[31994]</label>
 					<label2>[COLOR=white]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
