@@ -22,6 +22,7 @@
 					<font>lobsterMedium</font>
 					<textcolor>oldBlue2</textcolor>
 					<shadowcolor>ff222222</shadowcolor>
+					<include>homeMenuFade</include>
 				</control>
 				<control type="label">
 					<posx>-335</posx>
@@ -35,6 +36,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Container(8020).ListItem.Label]</label>
 					<visible>Control.HasFocus(8020)</visible>
+					<include>homeMenuFade</include>
 				</control>
 				<control type="wraplist" id="8020">
 					<animation effect="slide" start="0,0" end="-360,0" time="300" condition="Control.HasFocus(8020)">Conditional</animation>
@@ -51,6 +53,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
+					<include>homeMenuFade</include>
 					<itemlayout height="300" width="180">
 						<control type="image">
 							<posx>26</posx>
@@ -223,6 +226,7 @@
 					<font>lobsterMedium</font>
 					<textcolor>oldBlue2</textcolor>
 					<shadowcolor>ff222222</shadowcolor>
+					<include>homeMenuFade</include>
 				</control>
 				<control type="label">
 					<!-- <animation effect="zoom" end="125" center="auto" time="200">Focus</animation> -->
@@ -237,6 +241,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Container(8021).ListItem.Label]</label>
 					<visible>Control.HasFocus(8021)</visible>
+					<include>homeMenuFade</include>
 				</control>
 				<control type="wraplist" id="8021">
 					<animation effect="slide" start="0,0" end="-450,0" time="300" condition="Control.HasFocus(8021)">Conditional</animation>
@@ -253,6 +258,7 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
+					<include>homeMenuFade</include>
 					<itemlayout height="220" width="240">
 						<control type="image">
 							<posx>10</posx>

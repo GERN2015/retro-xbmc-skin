@@ -2,6 +2,7 @@
 <includes>
 	<include name="leftMenuBg">
 		<control type="group">
+		
 			<include>leftMenuSlide</include>
 			<include>transition2</include>
 			<!-- Background -->
@@ -36,6 +37,7 @@
 		</control>
 	</include>
 	<include name="leftMenuDressing">
+	
 		<control type="group">
 			<include>leftMenuSlide</include>
 			<include>transition2</include>
@@ -98,7 +100,7 @@
 	</include>
 	<include name="leftMenuTitle">
 	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<textoffsety>5</textoffsety>
 		<textoffsetx>20</textoffsetx>
 		<font>lobsterSmall</font>
@@ -114,12 +116,12 @@
 	</include>
 	<include name="leftMenuSpacing">
 	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<height>5</height>
 	</include>
 	<include name="leftMenuFormat">
 	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="80"/>
 		</animation>
@@ -135,7 +137,7 @@
 	</include>
 	<include name="leftMenuViewOptions">
 	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-	<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="100"/>
 		</animation>
@@ -152,7 +154,7 @@
 	</include>
 	<include name="leftMenuRadioButton">
 	<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-	<visible>!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 		<description>default radio button</description>
 		<textureradiofocus>settings/radioOn.png</textureradiofocus>
 		<textureradionofocus>settings/radioOff.png</textureradionofocus>
@@ -163,12 +165,14 @@
 		<radiowidth>20</radiowidth>
 	</include>
 	<include name="cutie">
+	
 		<control type="group">
 		<visible>!Skin.HasSetting(hidecutie)</visible>
 		<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
-		<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 			<include>cutieLeftMenuSlide</include>
 			<include>transition2</include>
+			
 			<!-- home -->
 			<control type="image">
 				<width>270</width>
@@ -222,7 +226,7 @@
 				<posy>477</posy>
 				<aspectratio>keep</aspectratio>
 				<include>transition2</include>
-				<texture background="true" align="left">backgrounds/agnes2.png</texture>
+				<texture background="true" align="left">cuties/beach3.png</texture>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 			</control>
 		</control>
@@ -263,6 +267,8 @@
 	<!-- home -->
 	<include name="HomeLeftSideMenu">
 		<control type="group" id="9000">
+		<visible>![Control.HasFocus(8020)|Control.HasFocus(8021)]</visible>
+			<visible allowhiddenfocus="true">!Control.HasFocus(300)</visible>
 			<posx>-378</posx>
 			<posy>64</posy>
 			<width>351</width>
@@ -273,9 +279,7 @@
 			<onleft>-</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
-			
 			<visible allowhiddenfocus="true">![ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(5000).HasFocus()]</visible>
-			<!-- <visible allowhiddenfocus="true">!Control.HasFocus(8021)</visible> -->
 			<animation effect="slide" start="202" end="40" time="500" condition="!ControlGroup(9000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="40" end="202" time="500" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 			<!--<include>homeMenuToggle</include>-->
@@ -303,31 +307,32 @@
 					<label>$LOCALIZE[41947]</label>
 					<onclick>XBMC.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
+					<visible>Skin.HasSetting(hidesearchmainmenu)</visible>
 				</control>
-				<!-- <control type="button" id="9080">
+				<control type="button" id="9080">
 					<label>$LOCALIZE[41984]</label>
-					<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
+					<onclick>XBMC.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showitunesmainmenu)</visible>
-				</control> -->
-				<!-- <control type="button" id="9090">
+				</control>
+				<control type="button" id="9090">
 					<label>$LOCALIZE[41980]</label>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
-				</control> -->
-				<!-- <control type="button" id="9096">				
-					<label>$LOCALIZE[41980]</label>
-					<label>Now Playing Visualiz</label>
+				</control>
+				<control type="button" id="9096">
+					<!-- label to do -->
+					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>Now Playing Visualizer</label>
 					<onclick>ActivateWindow(nowplaying)</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
-				</control> -->
+				</control>
 				<control type="button" id="9003">
 					<description>go to Video Plug-Ins</description>
 					<label>$LOCALIZE[41981]</label>
-					<onclick>ActivateWindow(MyVideo)</onclick>
+					<onclick>ActivateWindow(6)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</control>
@@ -347,20 +352,14 @@
 				</control>
 				<!-- Plex Online -->
 				<control type="button" id="9006">
-					<label>$LOCALIZE[31990]</label>
-					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+					<label>31976</label>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
+					<visible>Skin.HasSetting(hideplexonlinemainmenu)</visible>
 				</control>
 				<control type="button" id="9082">
 					<label>$LOCALIZE[0]</label>
 					<onclick>ActivateWindow(Programs)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showprogramsmainmenu)</visible>
-				</control>
-				<control type="button" id="9083">
-					<label>$LOCALIZE[24001]</label>
-					<onclick>ActivateWindow(AddonBrowser)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showprogramsmainmenu)</visible>
 				</control>
@@ -411,19 +410,19 @@
 					<description>Shutdown System</description>
 					<label>$LOCALIZE[41944]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.Powerdown()</onclick>
+					<onclick>XBMC.Powerdown</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9014">
 					<description>Sleep System</description>
 					<label>$LOCALIZE[41945]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.SleepSystem()</onclick>
+					<onclick>Suspend</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9013">
-					<description>Quit XBMC</description>
-					<label>$LOCALIZE[31989]</label>
+					<description>Quit Plex</description>
+					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>XBMC.Quit()</onclick>
@@ -465,14 +464,14 @@
 					<description>Search</description>
 					<label>$LOCALIZE[41947]</label>
 					<onclick>SetFocus(555)</onclick>
-					<onclick>XBMC.ActivateWindow(10051)</onclick>
+					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9006">
 					<description>Go to Home</description>
 					<label>Go to Home</label>
 					<onclick>SetFocus(555)</onclick>
-					<onclick>XBMC.ActivateWindow(0)</onclick>
+					<onclick>Plex.ActivateWindow(0)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>![Window.IsActive(0)]</visible>
 				</control>
@@ -509,7 +508,7 @@
 					<label>$LOCALIZE[537]</label>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>leftMenuViewOptions</include>
-					<!-- <visible>[Container.Content(Episodes)]</visible> -->
+					<visible>[Container.Content(episodes)] + !Window.IsActive(2)</visible>
 				</control>
 				<!-- slide (movies, tv shows & seasons) -->
 				<control type="button" id="9005">
@@ -627,7 +626,6 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible>
-					<visible>!Control.IsActive(54)</visible>
 				</control>
 				<control type="radiobutton" id="9051">
 					<!-- label to do -->
@@ -638,7 +636,6 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
-					<visible>!Control.IsActive(54)</visible>
 				</control>
 				<control type="radiobutton" id="9052">
 					<!-- label to do -->
@@ -649,18 +646,16 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
-					<visible>!Control.IsActive(54)</visible>
 				</control>
 				<control type="radiobutton" id="9053">
 					<!-- label to do -->
 					<!--<label>$LOCALIZE[41954]</label>-->
 					<label>Show Media Flags</label>
 					<onclick>Skin.ToggleSetting(showepisodemediaflags)</onclick>
-					<selected>!Skin.HasSetting(showepisodemediaflags)</selected>
+					<selected>Skin.HasSetting(showepisodemediaflags)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(51) | Control.IsVisible(555)] + Container.Content(episodes)</visible>
-					<visible>!Control.IsActive(54)</visible>
 				</control>
 				<!--<control type="radiobutton" id="9053">
 					<label>hide rating</label>
@@ -749,7 +744,6 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
-					<visible>!Control.IsActive(54)</visible>
 				</control>
 				<!--><control type="radiobutton" id="9061">
 					<label>$LOCALIZE[41956]</label>
@@ -796,11 +790,11 @@
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9074">
-					<description>Quit XBMC</description>
-					<label>XBMC beenden</label>
+					<description>Quit Plex</description>
+					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
-					<onclick>XBMC.Shutdown()</onclick>
+					<onclick>Plex.Shutdown()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 			</control>
@@ -821,10 +815,6 @@
 			<scrolltime>150</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | Window.IsActive(2003)]</visible>
 			<include>leftMenuSlide</include>
-			
-			
-			
-			
 			<control type="grouplist" id="9100">
 				<onup>9100</onup>
 				<ondown>9100</ondown>
@@ -843,30 +833,30 @@
 					<description>Search</description>
 					<label>$LOCALIZE[41947]</label>
 					<onclick>SetFocus(555)</onclick>
-					<onclick>XBMC.ActivateWindow(10051)</onclick>
+					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9006">
 					<description>Go to Home</description>
 					<label>Go to Home</label>
 					<onclick>SetFocus(555)</onclick>
-					<onclick>XBMC.ActivateWindow(0)</onclick>
+					<onclick>Plex.ActivateWindow(0)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>![Window.IsActive(0)]</visible>
 				</control>
 				<control type="button" id="9090">
 					<label>$LOCALIZE[41980]</label>
-					<onclick condition="Player.HasAudio">SetFocus(555)</onclick>
-					<onclick condition="Player.HasAudio">ActivateWindow(MusicPlaylist)</onclick>
-					<!-- <visible>Player.HasAudio</visible> -->
+					<onclick>SetFocus(555)</onclick>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9096">
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41980]</label>-->
 					<label>Now Playing Visualizer</label>
-					<onclick condition="Player.HasAudio">ActivateWindow(nowplaying)</onclick>
-					<!-- <visible>Player.HasAudio</visible> -->
+					<onclick>ActivateWindow(nowplaying)</onclick>
+					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<!-- view selection -->
@@ -875,11 +865,127 @@
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
-				<control type="button" id="2">
-					<label>test</label>
-					<include>leftMenuViewOptions</include>					
+				<!-- list -->
+				<control type="button" id="9019">
+					<label>$LOCALIZE[535]</label>
+					<onclick>Container.SetViewMode(555)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>![Window.IsActive(2)] | [Window.IsActive(2) + Container.Content(Secondary)]</visible>
 				</control>
-				
+				<!-- big list (tv show episodes) -->
+				<control type="button" id="9004">
+					<label>$LOCALIZE[537]</label>
+					<onclick>Container.SetViewMode(51)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(episodes)] + !Window.IsActive(2)</visible>
+				</control>
+				<!-- slide (movies, tv shows & seasons) -->
+				<control type="button" id="9005">
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(52)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				</control>
+				<!-- slide (episodes) -->
+				<!--<control type="button" id="9006">
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(58)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(episodes)]</visible>
+				</control>-->
+				<!-- slide (episodes) -->
+				<!--<control type="button" id="9006">
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(58)</onclick>
+					<include>leftMenuFormat</include>
+					<visible>Container.Content(episodes)</visible>
+				</control>-->
+				<!-- big thumbnails (movies & tv shows) -->
+				<control type="button" id="9007">
+					<label>$LOCALIZE[41949]</label>
+					<onclick>Container.SetViewMode(57)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				</control>
+				<!-- thumbnails small -->
+				<control type="button" id="9008">
+					<label>$LOCALIZE[41950]</label>
+					<onclick>Container.SetViewMode(571)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
+				</control>
+				<!-- thumbnails photos -->
+				<control type="button" id="9091">
+					<label>$LOCALIZE[41957]</label>
+					<onclick>Container.SetViewMode(572)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>Window.IsActive(2) + !Container.Content(Secondary)</visible>
+				</control>
+				<!-- banners (tv shows) -->
+				<control type="button" id="9010">
+					<label>$LOCALIZE[31093]</label>
+					<onclick>Container.SetViewMode(54)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<!-- multi-banners (tv shows) -->
+				<control type="button" id="9022">
+					<label>$LOCALIZE[41951]</label>
+					<onclick>Container.SetViewMode(566)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(tvshows)]</visible>
+				</control>
+				<!-- gallery (movies & tv shows) -->
+				<!--<control type="button" id="9012">
+					<label>$LOCALIZE[31002]</label>
+					<onclick>Container.SetViewMode(53)</onclick>
+					<include>leftMenuFormat</include>
+					<visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>-->
+				<!-- AVAILABLE -->
+				<control type="button" id="9013">
+					<label>$LOCALIZE[8]</label>
+					<onclick>ActivateWindow()</onclick>
+					<visible>false</visible>
+				</control>
+				<!-- AVAILABLE -->
+				<control type="button" id="9014">
+					<label>$LOCALIZE[8]</label>
+					<onclick>ActivateWindow()</onclick>
+					<include>-</include>
+					<visible>false</visible>
+				</control>
+				<!-- AVAILABLE -->
+				<control type="button" id="9017">
+					<label>$LOCALIZE[5]</label>
+					<include>-</include>
+					<visible>false</visible>
+				</control>
+				<!-- AVAILABLE -->
+				<control type="button" id="9018">
+					<label>$LOCALIZE[5]</label>
+					<onclick>SetFocus(1150)</onclick>
+					<include>-</include>
+					<include>newHomeMenuCategoryNoFocusBg</include>
+					<visible>false</visible>
+				</control>
+				<!-- slide -->
+				<!--<control type="button" id="9051">
+					<description>SLIDE: use posters</description>
+					<label>$LOCALIZE[31061]</label>
+					<onclick>Container.SetViewMode(52)</onclick>
+					<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
+				</control>
+				<control type="button" id="9052">
+					<description>SLIDE: use fanart</description>
+					<label>$LOCALIZE[31039]</label>
+					<onclick>Container.SetViewMode(55)</onclick>
+					<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
+				</control>-->
 				<control type="radiobutton" id="9049">
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41952]</label>-->
@@ -888,8 +994,7 @@
 					<selected>!Skin.HasSetting(hidetvratings)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<!-- <visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible> -->
-					<!-- <visible>!Control.IsActive(54)</visible> -->
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible>
 				</control>
 				<control type="radiobutton" id="9051">
 					<!-- label to do -->
@@ -899,19 +1004,17 @@
 					<selected>!Skin.HasSetting(hidemovieratings)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<!-- <visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible> -->
-					<!-- <visible>!Control.IsActive(54)</visible> -->
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9052">
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41954]</label>-->
 					<label>Show Media Flags</label>
 					<onclick>Skin.ToggleSetting(hidemovielistflags)</onclick>
-					<selected>Skin.HasSetting(hidemovielistflags)</selected>
+					<selected>!Skin.HasSetting(hidemovielistflags)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-				<!-- 	<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
-					<visible>!Control.IsActive(54)</visible> -->
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9053">
 					<!-- label to do -->
@@ -921,9 +1024,8 @@
 					<selected>Skin.HasSetting(showepisodemediaflags)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<!-- <visible>[Control.IsVisible(51) | Control.IsVisible(555)] + Container.Content(Episodes)</visible>
-					<visible>!Control.IsActive(54)</visible>
- -->				</control>
+					<visible>[Control.IsVisible(51) | Control.IsVisible(555)] + Container.Content(episodes)</visible>
+				</control>
 				<!--<control type="radiobutton" id="9053">
 					<label>hide rating</label>
 					<onclick>Container.SetViewMode(52)</onclick>
@@ -1010,8 +1112,7 @@
 					<selected>Skin.HasSetting(thumbnailsshowstudioflag)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-			<!-- 		<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
-					<visible>!Control.IsActive(54)</visible> -->
+					<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
 				</control>
 				<!--><control type="radiobutton" id="9061">
 					<label>$LOCALIZE[41956]</label>
@@ -1058,7 +1159,7 @@
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9074">
-					<description>Quit XBMC</description>
+					<description>Quit Plex</description>
 					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
