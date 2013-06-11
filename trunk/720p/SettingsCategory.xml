@@ -137,6 +137,11 @@
 				<label>&#xB7; $LOCALIZE[13000] &#xB7;</label>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
+			<control type="label">
+				<include>settingsPageLabel</include>
+				<label>&#xB7; $LOCALIZE[166] &#xB7;</label>
+				<visible>Window.IsActive(SkinSettings)</visible>
+			</control>
 		</control>
 		<control type="group">
 			<control type="grouplist" id="3">
@@ -156,8 +161,8 @@
 				<description>control area</description>
 				<posx>415</posx>
 				<posy>200</posy>
-				<width>783</width>
-				<height>595</height>
+				<width>683</width>
+				<height>380</height>
 				<itemgap>0</itemgap>
 				<onleft>3</onleft>
 				<onright>-</onright>

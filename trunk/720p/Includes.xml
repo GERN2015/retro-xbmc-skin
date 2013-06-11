@@ -21,6 +21,7 @@
 	<include file="Slideshows.xml">-</include>
 	<include file="Debug.xml">-</include>
 	<include file="Search.xml">-</include>
+	<include file="PlexSearch.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="NowPlayingModuls.xml">-</include>
@@ -32,7 +33,7 @@
 	<include file="IncludesAnimations.xml">-</include>
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
-        <include file="IncludesHomeRecentlyAdded.xml">-</include>
+	<include file="IncludesHomeRecentlyAdded.xml">-</include>
 	<include file="Help.xml">-</include>
 	<!-- WINDOWS BACKGROUNDS & FANART -->
 	<!-- OVERLAYS -->
