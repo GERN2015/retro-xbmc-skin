@@ -11,12 +11,13 @@
 Additional credits :[CR][CR]A huge thanks to [COLOR=ivory2]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR]A huge thanks to [COLOR=ivory2]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]Without you guys Retroplex just wouldn't be the same. Thanks.
 	</string>
 	<!-- Settings Home -->
-	<string id="31991">General</string>
+	
 	<string id="31124">Homescreen</string><!-- -->
 	<string id="41001">Show Weather pin-up</string>
 	<string id="41002">Show RSS feed</string>
 	<string id="41003">Turn all slideshows OFF</string>
 	<string id="41004">Hide Retroplex logo</string>
+	<string id="41005">Use Watchlist instead of Recently added episodes</string>
 	<!-- Settings Home Main Menu -->
 	<string id="31961">Main Menu</string><!-- -->
 	<string id="41006">Show "Search" in main menu</string>
@@ -321,6 +322,8 @@ Enjoy the experience.
 	<string id="31988">Recently Added</string>
 	<string id="31989">Quit XBMC</string>
 	<string id="31990">HD Movies</string>
+	<string id="31991">General</string>
+	<string id="31992">Watchlist</string>
 	
 	
 	<string id="3300">Mute</string>

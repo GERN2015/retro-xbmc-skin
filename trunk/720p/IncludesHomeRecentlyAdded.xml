@@ -227,6 +227,22 @@
 					<textcolor>oldBlue2</textcolor>
 					<shadowcolor>ff222222</shadowcolor>
 					<include>homeMenuFade</include>
+					<visible>!Skin.HasSetting(WatchListHomeEpisodes)</visible>
+				</control>
+				<control type="label">
+					<description>Recently Added</description>
+					<posx>60</posx>
+					<posy>-55</posy>
+					<height>20</height>
+					<width>540</width>
+					<label>$LOCALIZE[31992]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>lobsterMedium</font>
+					<textcolor>oldBlue2</textcolor>
+					<shadowcolor>ff222222</shadowcolor>
+					<include>homeMenuFade</include>
+					<visible>Skin.HasSetting(WatchListHomeEpisodes)</visible>
 				</control>
 				<control type="label">
 					<!-- <animation effect="zoom" end="125" center="auto" time="200">Focus</animation> -->
@@ -330,46 +346,10 @@
 						</control> -->
 					</focusedlayout>
 					<content>
-						<item id="1">
-							<label>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.1.Title)]</label>
-							<label2>$INFO[Window.Property(RecentEpisode.1.Episode)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.1.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.1.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.1.Path)])</onclick>
-							<icon>$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</icon>
-						</item>
-						<item id="2">
-							<label>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.2.Title)]</label>
-							<label2>$INFO[Window.Property(RecentEpisode.2.Episode)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.2.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.2.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.2.Path)])</onclick>
-							<icon>$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</icon>
-						</item>
-						<item id="3">
-							<label>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.3.Title)]</label>
-							<label2>$INFO[Window.Property(RecentEpisode.3.Episode)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.3.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.3.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.3.Path)])</onclick>
-							<icon>$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</icon>
-						</item>
-						<item id="4">
-							<label>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.4.Title)]</label>
-							<label2>$INFO[Window.Property(RecentEpisode.4.Episode)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.4.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.4.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.4.Path)])</onclick>
-							<icon>$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</icon>
-						</item>
-						<item id="5">
-							<label>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)] - $INFO[Window.Property(RecentEpisode.5.Title)]</label>
-							<label2>$INFO[Window.Property(RecentEpisode.5.Episode)]</label2>
-							<property name="EpisodeSeason">$INFO[Window.Property(RecentEpisode.5.EpisodeSeason)]</property>
-							<property name="ItemRating">$INFO[Window.Property(RecentEpisode.5.Rating)]</property>
-							<onclick>PlayMedia($INFO[Window.Property(RecentEpisode.5.Path)])</onclick>
-							<icon>$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</icon>
-						</item>
+					
+						<include condition="!Skin.HasSetting(WatchListHomeEpisodes)">RecentEpisodesInfos</include>
+						<include condition="Skin.HasSetting(WatchListHomeEpisodes)">WatchListEpisodesInfos</include>
+						
 					</content>
 				</control>
 			</control>
