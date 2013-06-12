@@ -334,6 +334,11 @@
 					<onclick>ActivateWindow(Programs)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
+				<control type="button" id="9083">
+					<label>$LOCALIZE[24001]</label>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>
 				<control type="button" id="9001">
 					<label>$LOCALIZE[31996]</label>
 					<include>leftMenuTitle</include>
