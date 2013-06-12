@@ -321,7 +321,7 @@
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41980]</label>-->
 					<label>Now Playing Visualizer</label>
-					<onclick>ActivateWindow(nowplaying)</onclick>
+					<onclick>Fullscreen</onclick>
 					<visible>Player.HasAudio</visible>
 					<enable>Player.HasAudio</enable>
 					<include>leftMenuViewOptions</include>
@@ -473,7 +473,7 @@
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41980]</label>-->
 					<label>Now Playing Visualizer</label>
-					<onclick>ActivateWindow(nowplaying)</onclick>
+					<onclick>Fullscreen</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
@@ -843,7 +843,7 @@
 					<!-- label to do -->
 					<!--><label>$LOCALIZE[41980]</label>-->
 					<label>Now Playing Visualizer</label>
-					<onclick>ActivateWindow(nowplaying)</onclick>
+					<onclick>Fullscreen</onclick>
 					<visible>Player.HasAudio</visible>
 					<enable>Player.HasAudio</enable>
 					<include>leftMenuViewOptions</include>

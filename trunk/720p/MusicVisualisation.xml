@@ -1,21 +1,21 @@
 <window id="2006">
-	<defaultcontrol always="true">72</defaultcontrol>
-	<allowoverlay>false</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="1000" reversible="true">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500" reversible="false">WindowClose</animation>
 	<controls>
-		<!--<include condition="IsEmpty(MusicPlayer.Property(Fanart_Image) + !Skin.HasSetting(musicVis) | !Skin.HasSetting(musicVisBlend)">goHome</include>-->
-		<control type="visualisation" id="2">
-			<description>visualisation</description>
-			<include>fullScreenScale</include>
-			<visible>IsEmpty(MusicPlayer.Property(Fanart_Image) + !Skin.HasSetting(musicVis) | Skin.HasSetting(musicVisBlend)</visible>
+		<include>nowplayingpinupslideshow</include>
+		<!--><include>nowplayingretroplexslideshow</include>
+		<include>nowplayingpersonalslideshow</include>	
+		<include>nowplayingfanartslideshow</include>-->
+		<include>frameOverlay</include>
+		<include>retroOverlay</include>
+		<include>nowplayingturntable</include>
+		<!--><include>nowplayingminimalist</include>
+		<include>nowPlayingBottomWide</include>-->
+		<control type="group">
+			<visible>!Skin.HasSetting(retroplexmusiclogo)</visible>
+			<include>RetroplexLogo</include>
 		</control>
-		<control type="image">
-			<description>Fanart image</description>
-			<include>fullScreenScale</include>
-			<texture fallback="special://skin/backgrounds/library/artistNoFanart.png">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<visible>Skin.HasSetting(musicVis)</visible>
-			<include>fadeinout</include>
-			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(musicVisBlend)">Conditional</animation>
-		</control>
-		<include>musicOSDInfoNew</include>
-	</controls>
+		</controls>
 </window>
