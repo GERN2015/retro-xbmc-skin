@@ -309,23 +309,7 @@
 					<include>leftMenuViewOptions</include>
 					<!-- <visible>Skin.HasSetting(hidesearchmainmenu)</visible> -->
 				</control>
-			
-				<control type="button" id="9090">
-					<label>$LOCALIZE[41980]</label>
-					<onclick>ActivateWindow(MusicPlaylist)</onclick>
-					<visible>Player.HasAudio</visible>
-					<enable>Player.HasAudio</enable>
-					<include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="9096">
-					<!-- label to do -->
-					<!--><label>$LOCALIZE[41980]</label>-->
-					<label>Now Playing Visualizer</label>
-					<onclick>Fullscreen</onclick>
-					<visible>Player.HasAudio</visible>
-					<enable>Player.HasAudio</enable>
-					<include>leftMenuViewOptions</include>
-				</control>
+				
 				<control type="button" id="9003">
 					<description>go to Video Plug-Ins</description>
 					<label>$LOCALIZE[41981]</label>
@@ -348,6 +332,36 @@
 				<control type="button" id="9082">
 					<label>$LOCALIZE[0]</label>
 					<onclick>ActivateWindow(Programs)</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9001">
+					<label>$LOCALIZE[31996]</label>
+					<include>leftMenuTitle</include>
+					<visible>Player.HasVideo|Player.HasAudio</visible>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="9089">
+					<label>$LOCALIZE[31995]</label>
+					<onclick>Fullscreen</onclick>
+					<visible>Player.HasVideo</visible>
+					<enable>Player.HasVideo</enable>
+					<include>leftMenuViewOptions</include>
+				</control>
+			
+				<control type="button" id="9090">
+					<label>$LOCALIZE[41980]</label>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>Player.HasAudio</visible>
+					<enable>Player.HasAudio</enable>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9096">
+					<!-- label to do -->
+					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>Now Playing Visualizer</label>
+					<onclick>Fullscreen</onclick>
+					<visible>Player.HasAudio</visible>
+					<enable>Player.HasAudio</enable>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<!-- Home screen options -->
@@ -461,6 +475,13 @@
 					<onclick>XBMC.ActivateWindow(0)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>![Window.IsActive(0)]</visible>
+				</control>
+					<control type="button" id="9089">
+					<label>$LOCALIZE[31995]</label>
+					<onclick>Fullscreen</onclick>
+					<visible>Player.HasVideo</visible>
+					<enable>Player.HasVideo</enable>
+					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9090">
 					<label>$LOCALIZE[41980]</label>
@@ -830,6 +851,13 @@
 					<onclick>XBMC.ActivateWindow(0)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>![Window.IsActive(0)]</visible>
+				</control>
+					<control type="button" id="9089">
+					<label>$LOCALIZE[31995]</label>
+					<onclick>Fullscreen</onclick>
+					<visible>Player.HasVideo</visible>
+					<enable>Player.HasVideo</enable>
+					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9090">
 					<label>$LOCALIZE[41980]</label>
