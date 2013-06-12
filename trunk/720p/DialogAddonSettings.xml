@@ -107,7 +107,7 @@
 			</control>
 			<control type="group" id="9001">
 				<posx>34</posx>
-				<posy>480</posy>
+				<posy>510</posy>
 				<control type="button" id="12">
 					<description>Defaults Button</description>
 					<label>409</label>
