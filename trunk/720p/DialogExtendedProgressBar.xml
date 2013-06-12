@@ -1,0 +1,57 @@
+<window>
+<!-- 	<onunload condition="Skin.HasSetting(DownloadArtAfterLibraryUpdate)">XBMC.RunScript(script.artwork.downloader, silent=true)</onunload> -->
+	<defaultcontrol></defaultcontrol>
+	<animation effect="slide" start="0,-70" end="0,0" time="100">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,-70" delay="400" time="100">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<posx>580</posx>
+			<posy>5</posy>
+			<animation effect="slide" end="0,-80" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<!-- <control type="image">
+				<posx>0</posx>
+				<posy>-10</posy>
+				<width>400</width>
+				<height>140</height>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<texture diffuse="backgrounds/grain10.jpg" flipx="true" border="10">dialogs/square_menu_background.png</texture>				
+			</control> -->
+			
+			<control type="label" id="30">
+				<description>Header Label</description>
+				<posx>15</posx>
+				<posy>8</posy>
+				<width>670</width>
+				<height>18</height>
+				<font>lobsterSmall2</font>
+				<aligny>center</aligny>
+				<textcolor>greenlime</textcolor>
+				<shadowcolor>black</shadowcolor>				
+				<align>left</align>				
+			</control>
+			<control type="label" id="31">
+				<description>Title Label</description>
+				<posx>15</posx>
+				<posy>38</posy>
+				<width>370</width>
+				<height>20</height>
+				<font>qlassikMedium2</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<!-- <textcolor>oldBlue2</textcolor> -->
+				<!-- <textcolor>brown</textcolor> -->
+			</control>
+			<!-- <control type="progress" id="32">
+				<description>progress control</description>
+				<posx>13</posx>
+				<posy>66</posy>
+				<width>370</width>
+				<height>12</height>
+				<colordiffuse>oldBlue2</colordiffuse>
+			</control> -->
+		</control>
+	</controls>
+</window>
