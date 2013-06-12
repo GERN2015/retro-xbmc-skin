@@ -726,7 +726,7 @@
 							<posx>755</posx>
 							<posy>679</posy>
 							<include>mediaFlagsSmall</include>
-							<visible>Container.Content(movies) + Skin.HasSetting(hidemovielistflags)</visible>
+							<visible>Container.Content(movies) + !Skin.HasSetting(hidemovielistflags)</visible>
 						</control>
 						<control type="group">
 							<posx>1135</posx>
@@ -739,14 +739,14 @@
 							<posy>299</posy>
 							<include>studioFlagSmall</include>
 						</control>
-						<visible>Container.Content(movies) + Skin.HasSetting(hidemovielistflags)</visible>
+						<visible>Container.Content(movies) + !Skin.HasSetting(hidemovielistflags)</visible>
 					</control>
 					<control type="group">
 						<control type="group">
 							<posx>755</posx>
 							<posy>679</posy>
 							<include>mediaFlagsSmall</include>
-							<visible>Container.Content(tvshows) + Skin.HasSetting(hidemovielistflags)</visible>
+							<visible>Container.Content(tvshows) + !Skin.HasSetting(hidemovielistflags)</visible>
 						</control>
 						<control type="group">
 							<posx>1135</posx>
@@ -759,11 +759,11 @@
 							<posy>319</posy>
 							<include>studioFlagSmall0</include>
 						</control>
-						<visible>Container.Content(tvshows) + Skin.HasSetting(hidemovielistflags)</visible>
+						<visible>Container.Content(tvshows) + !Skin.HasSetting(hidemovielistflags)</visible>
 					</control>
 					<control type="group">
 						<posx>755</posx>
-						<posy>465</posy>
+						<posy>460</posy>
 						<include>mediaFlagsSmall</include>
 						<visible>Container.Content(episodes) + Skin.HasSetting(showepisodemediaflags)</visible>
 					</control>
