@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <window id="2003">
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">8</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>Backgrounds</include>
@@ -287,7 +287,7 @@
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="grouplist" id="1000">
-					<posy>80</posy>
+					<posy>60</posy>
 					<itemgap>6</itemgap>
 					<visible>!ControlGroup(9001).HasFocus()</visible>
 					
@@ -355,7 +355,7 @@
 					</control>
 					<control type="textbox" id="4">
 						<width>690</width>
-						<height>300</height>
+						<height>200</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<textcolor>ivory2</textcolor>
 						<font>titilliumMedium</font>
@@ -567,123 +567,139 @@
 				</control>
 			</control>
 			<!-- FUNCTIONS -->
-			<control type="group">
-				<visible>Container.Content(episodes)|Container.Content(tvshows)</visible>
-				<control type="button" id="10">
-					<posy>570</posy>
-					<posx>507</posx>
-					<onleft>12</onleft>
-					<onright>12</onright>
-					<label>Choose Art</label>
+			
+			
+			<control type="image">
+				<posy>625</posy>
+				<posx>485</posx>
+				<width>75</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>Control.HasFocus(8)+Container.Content(TVShows)</visible>
+			</control>
+			<control type="image">
+				<posy>625</posy>
+				<posx>495</posx>
+				<width>50</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>Control.HasFocus(8)+[Container.Content(Movies)|Container.Content(Episodes)|Container.Content(musicvideos)]</visible>
+			</control>
+			<control type="image">
+				<posy>625</posy>
+				<posx>635</posx>
+				<width>78</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>Control.HasFocus(6)</visible>
+			</control>
+			<control type="image">
+				<posy>625</posy>
+				<posx>773</posx>
+				<width>105</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>Control.HasFocus(10)</visible>
+			</control>
+			<control type="image">
+				<posy>625</posy>
+				<posx>947</posx>
+				<width>63</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>Control.HasFocus(11)</visible>
+			</control>
+			
+			<control type="grouplist" id = "9000">
+			
+				<posy>590</posy>
+				<posx>447</posx>
+				<width>1280</width>
+				<height>40</height>
+				<itemgap>2</itemgap>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>500</onup>
+				<ondown>9000</ondown>
+				<!-- <visible>Container.Content(episodes)|Container.Content(tvshows)</visible> -->
+				
+				<control type = "togglebutton" id = "8">
+					<description>Play/browse to Show</description>					
+					<label>208</label>
+					<height>40</height>
+					<width>150</width>
 					<font>lobsterSmall</font>
 					<textcolor>ivory2</textcolor>
 					<focusedcolor>oldBlueLight</focusedcolor>
-					<shadowcolor>ff333333</shadowcolor>
+					<shadowcolor>ff333333</shadowcolor>					
+					<altlabel>1024</altlabel>
+					<usealttexture>Container.Content(TVShows)</usealttexture>
+					<align>center</align>
+				</control>
+				<control type="button" id="6">		
+					<label>Refresh</label>
+					<height>40</height>
+					<width>150</width>
+					<font>lobsterSmall</font>
+					<textcolor>ivory2</textcolor>
+					<focusedcolor>oldBlueLight</focusedcolor>
+					<shadowcolor>ff333333</shadowcolor>		
 					<width>250</width>
 					<height>30</height>
-					<align>left</align>
+					<align>center</align>
 				</control>
-				<control type="image">
-					<posy>610</posy>
-					<posx>517</posx>
-					<width>100</width>
-					<height>1</height>
-					<texture>frames/oldbluercorners.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-					<visible>Control.HasFocus(10)</visible>
-				</control>
-				<control type="button" id="12">
-					<posy>570</posy>
-					<posx>792</posx>
-					<onleft>10</onleft>
-					<onright>10</onright>
-					<label>Change Fanart</label>
+		 		
+				<control type="button" id="10">		
+					<label>Choose Art</label>
+					<height>40</height>
+					<width>150</width>
 					<font>lobsterSmall</font>
 					<textcolor>ivory2</textcolor>
 					<focusedcolor>oldBlueLight</focusedcolor>
-					<shadowcolor>ff333333</shadowcolor>
-					<width>350</width>
+					<shadowcolor>ff333333</shadowcolor>		
+					<width>250</width>
 					<height>30</height>
-					<align>left</align>
+					<align>center</align>
 				</control>
-				<control type="image">
-					<posy>610</posy>
-					<posx>802</posx>
-					<width>140</width>
-					<height>1</height>
-					<texture>frames/oldbluercorners.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-					<visible>Control.HasFocus(12)</visible>
-				</control>
-				<include>VideoInfoLeftSideMenu_</include>
-			</control>
-			<control type="group">
-				<visible>Container.Content(movies)</visible>
-				<control type="button" id="10">
-					<posy>570</posy>
-					<posx>465</posx>
-					<onleft>12</onleft>
-					<onright>12</onright>
-					<label>Change Poster/Thumb</label>
+				<control type="button" id="11">		
+					<label>Trailer</label>
+					<height>40</height>
+					<width>150</width>
 					<font>lobsterSmall</font>
 					<textcolor>ivory2</textcolor>
 					<focusedcolor>oldBlueLight</focusedcolor>
-					<shadowcolor>ff333333</shadowcolor>
-					<width>350</width>
+					<shadowcolor>ff333333</shadowcolor>		
+					<width>250</width>
 					<height>30</height>
-					<align>left</align>
+					<align>center</align>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
 				</control>
-				<control type="image">
-					<posy>610</posy>
-					<posx>475</posx>
-					<width>200</width>
-					<height>1</height>
-					<texture>frames/oldbluercorners.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-					<visible>Control.HasFocus(10)</visible>
-				</control>
-				<control type="button" id="12">
-					<posy>570</posy>
-					<posx>750</posx>
-					<onleft>10</onleft>
-					<onright>10</onright>
-					<label>Change Fanart</label>
-					<font>lobsterSmall</font>
-					<textcolor>ivory2</textcolor>
-					<focusedcolor>oldBlueLight</focusedcolor>
-					<shadowcolor>ff333333</shadowcolor>
-					<width>350</width>
-					<height>30</height>
-					<align>left</align>
-				</control>
-				<control type="image">
-					<posy>610</posy>
-					<posx>760</posx>
-					<width>140</width>
-					<height>1</height>
-					<texture>frames/oldbluercorners.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-					<visible>Control.HasFocus(12)</visible>
-				</control>
-				<control type="button" id="14">
-					<posy>570</posy>
-					<posx>1035</posx>
-					<onleft>10</onleft>
-					<onright>10</onright>
+		 	
+				<!-- <control type="button" id="14">		
 					<label>CAST</label>
+					<height>40</height>
+					<width>150</width>
 					<font>lobsterSmall</font>
 					<textcolor>ivory2</textcolor>
 					<focusedcolor>oldBlueLight</focusedcolor>
-					<shadowcolor>ff333333</shadowcolor>
+					<shadowcolor>ff333333</shadowcolor>		
 					<width>350</width>
 					<height>30</height>
-					<align>left</align>
-				</control>
-				<control type="image">
+					<align>center</align>
+				</control> -->
+			<!-- 	<control type="image">
 					<posy>610</posy>
 					<posx>1045</posx>
 					<width>140</width>
@@ -692,9 +708,10 @@
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 					<visible>Control.HasFocus(14)</visible>
-				</control>
+				</control>	 -->		
 				<include>VideoInfoLeftSideMenu_</include>
 			</control>
+			
 		</control>
 	</controls>
 </window>
