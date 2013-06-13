@@ -339,6 +339,13 @@
 					<onclick>ActivateWindow(AddonBrowser)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
+				<control type="button" id="9084">
+					<label>$LOCALIZE[31997]</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<include>leftMenuViewOptions</include>
+					<!-- <visible>Skin.HasSetting(ShowFavouritesHome)</visible>
+					<enable>Skin.HasSetting(ShowFavouritesHome)</enable> -->
+				</control>
 				<control type="button" id="9001">
 					<label>$LOCALIZE[31996]</label>
 					<include>leftMenuTitle</include>
