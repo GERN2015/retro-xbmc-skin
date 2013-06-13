@@ -1,0 +1,94 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>365</posx>
+		<posy>210</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+				<width>550</width>
+				<height>260</height>
+				<include>dialogWindow</include>
+			</control>
+		<control type="group">
+			
+			
+			<control type="label">
+				<description>Title</description>
+				<posy>3</posy>
+				<width>482</width>
+				<include>dialogHeading</include>				
+				<label>$LOCALIZE[31997]</label>
+				
+			</control>
+			
+			<control type="list" id="450">
+				<posx>2</posx>
+				<posy>30</posy>
+				<width>348</width>
+				<height>210</height>
+				<onup>450</onup>
+				<onleft>Dialog.Close(Favourites)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40">
+					<!-- <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>346</width>
+						<height>40</height>
+						<texture border="5">simplicity/menuitemnf.png</texture>
+					</control> -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>346</width>
+						<height>40</height>
+						<font>lobsterSmall</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>chocolate</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<!-- <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>346</width>
+						<height>40</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="5">simplicity/list-selector.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>346</width>
+						<height>40</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="5">simplicity/list-selector.png</texture>
+					</control> -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>346</width>
+						<height>40</height>
+						<font>lobsterSmall</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>oldBlue2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<info>ListItem.Label</info>
+						<animation effect="zoom" end="105" time="100">Focus</animation> 
+					</control>
+				</focusedlayout>
+			</control>
+			
+		</control>
+		
+	</controls>
+</window>
